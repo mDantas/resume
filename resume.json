@@ -139,6 +139,15 @@
       ]
     },
     {
+      "name": "Ops/Cloud",
+      "level": "Experienced",
+      "keywords": [
+        "Heroku",
+        "Logentries",
+        "NewRelic"
+      ]
+    },
+    {
       "name": "Testing",
       "level": "Experienced",
       "keywords": [
@@ -146,17 +155,6 @@
         "Spies",
         "Mocks",
         "Mocha"
-      ]
-    },
-    {
-      "name": "Ops/Cloud",
-      "level": "Experienced",
-      "keywords": [
-        "Heroku",
-        "Logentries",
-        "NewRelic",
-        "Docker",
-        "Bamboo"
       ]
     },
     { "name": "Data warehousing",
