@@ -34,8 +34,8 @@
         "Tech led a team of 3 in the migration from one third-party backend service provider to another. In numbers, the effort spanned about 4 months of effort, ~100 Jira tickets covering work across the stack, and affected ~40k existing users (and all our new signups).",
         "Refactored the application database schema (~6 tables, ~6 views) from update-driven to event-driven so we could better measure customer impact.",
         "From ideation to implementation, introduced a method to measure customer impact: as a recurring job, search google for our customers' businesses and check the search results for fuzzy matches of customer-identifying information. This involved using Google's custom search engine API, parsing the JSON, and using the Levenshtein algorithm to find closest matches to specified customer business parameters (e.g. name and zip). I've pasted a link to a small, fun open source contribution that resulted from this work.",
-			  "Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
-			  "Internationalization (using react-intl)",
+        "Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
+        "Internationalization (using react-intl)",
         "Expanding the application's unit test footprint."
       ]
     },
@@ -53,7 +53,7 @@
         "Sundry bug fixes and small feature tickets."
       ]
     },
-		{
+    {
       "company": "Dell @ Executive Office of the President",
       "position": "Rails developer - Max.gov",
       "website": "https://max.gov",
@@ -62,9 +62,9 @@
       "summary": "Worked on max.gov, a tool to collect human-entered data across agencies (e.g. to compile the federal budget). My main contribution was a fault-tolerant script to migrate tree-subsets of records (order of magnitude, ~100k) from a legacy database with Latin1 encoding to a new databases with UTF8 encoding. A script existed at the time but it was shown to result in data corruption (it did an inconsistently shallow/deep copy) and also could take up to a day or two to run. The new script would run in minutes to hours. The end result could be considered an ETL implemented in Ruby and Rails and was used to migrate all existing federal agencies' data to the new database.",
       "highlights": [
         "Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)",
-				"Wrote logic to traverse the application schema (~10 tables), select the entire source tree of data into memory, use Ruby to dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity."
+        "Wrote logic to traverse the application schema (~10 tables), select the entire source tree of data into memory, use Ruby to dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity."
       ]
-		}
+    }
   ],
   "education": [
     {
@@ -173,8 +173,8 @@
       "keywords": [
         "Docker",
         "Bamboo"
-			]
-		},
+      ]
+    },
     {
       "name": "Functional Languages",
       "level": "Some experience",
