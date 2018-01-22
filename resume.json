@@ -5,7 +5,7 @@
     "picture": "",
     "email": "mateusdm88@gmail.com",
     "phone": "(202) 753-4966",
-    "summary": "",
+    "summary": "I like solving inherently hard problems with large impact. I take special pleasure when solving these calls on and expands my knowledge of math and computer science.",
     "profiles": [
       {
         "network": "Github",
@@ -42,10 +42,10 @@
     {
       "company": "Vistaprint",
       "position": "Software Engineer, Pagemodo product",
-      "website": "https://www.vistaprint.com/digital-marketing/local-listings",
+      "website": "http://www.pagemodo.com",
       "startDate": "2014-06-01",
       "endDate": "2015-04-01",
-      "summary": "Worked on the Pagemodo (http://www.pagemodo.com/) product - a Rails app with postgres backend hosted on Heroku with some Backbone & React on the frontend. My contributions were primarily as an individual feature contributor. My greatest isolated contribution was this experience for Social Media Marketing World 2015: https://www.pagemodo.com/smmw15. This was a vertical slice of work on the stack - wiring up models and controllers, the twitter integration, setting up a backbone app for the image carousel, etc. The \"designer\" that pops open if you click on a design already existed, I just ported it into this experience. I also did not do the html/css on the linked page. My other main contributions during this time included work on pagemodo's teams feature and some work with Apache SOLR to improve our content recommendation.",
+      "summary": "Worked on the Pagemodo product - a Rails app with postgres backend hosted on Heroku with some Backbone & React on the frontend. My contributions were primarily as an individual feature contributor. My greatest isolated contribution was this experience for Social Media Marketing World 2015: https://www.pagemodo.com/smmw15. This was a vertical slice of work on the stack - wiring up models and controllers, the twitter integration, setting up a backbone app for the image carousel, etc. The \"designer\" that pops open if you click on a design already existed, I just ported it into this experience. I also did not do the html/css on the linked page. My other main contributions during this time included work on pagemodo's teams feature and some work with Apache SOLR to improve our content recommendation.",
       "highlights": [
         "A Twitter-post integrated Backbone SPA for Social Media Marketing World 2015 (https://www.pagemodo.com/smmw15). This was a thin vertical slice of work, adding tables/models, controller, views, and a Backbone app. The post designer to which I integrated the Twitter-posting experience already existed as a core feature of the Pagemodo product.",
         "Pagemodo teams feature - writing Rails controllers and a Backbone spa FIXME - Marionetter",
