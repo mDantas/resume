@@ -101,15 +101,6 @@
       "summary": "There is no spoon."
     }
   ],
-  "publications": [
-    {
-      "name": "Video compression for 3d media",
-      "publisher": "Hooli",
-      "releaseDate": "2014-10-01",
-      "website": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
-    }
-  ],
   "skills": [
     {
       "name": "Web Development",
@@ -132,8 +123,12 @@
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Native speaker"
+      "language": "Portuguese",
+      "fluency": "Native fluency"
+    },
+    {
+      "language": "French",
+      "fluency": "Professional proficiency"
     }
   ],
   "interests": [
@@ -143,12 +138,6 @@
         "Ferrets",
         "Unicorns"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
     }
   ]
 }
