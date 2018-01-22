@@ -168,19 +168,13 @@
       ]
     },
     {
-      "name": "Relational databases",
-      "level": "Experienced",
+      "name": "Ops/Infrastructure,
+      "level": "Some experience",
       "keywords": [
-        "Postgres",
-        "DB2",
-        "Sql server",
-        "Common table expressions",
-        "Stored procedures",
-        "Views",
-        "Indexes",
-        "Query inspection/design/optimization"
-      ]
-    },
+        "Docker",
+        "Bamboo"
+			]
+		},
     {
       "name": "Functional Languages",
       "level": "Some experience",
@@ -213,6 +207,12 @@
         "Theatre",
         "20th century literature",
         "Magritte"
+      ]
+    },
+    {
+      "name": "Recreational Math",
+      "keywords": [
+        "ProjectEuler"
       ]
     }
   ]
