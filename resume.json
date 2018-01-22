@@ -18,7 +18,6 @@
     {
       "company": "Vistaprint",
       "position": "Software Engineer, Vistaprint Data Warehouse",
-      "website": "n/a",
       "startDate": "2017-10-01",
       "endDate": "Present",
       "summary": "As part of a two person team, I am working on getting our bookings/subscription data from disparate relational sources (~12 products across two billing platforms) into the company's centralized, columnar-storage data warehouse and optimizing the shape of the data to BI's queries. This has involved moving source data over as-is, designing a pair of fact and dimension tables to fit the data into, and writing sprocs to normalize the relational data into columnar fact/dimension form. I remain on the on-call rotation for Vistaprint Digital's marketing products."
@@ -63,6 +62,17 @@
       "highlights": [
         "Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)",
         "Wrote logic to traverse the application schema (~10 tables), select the entire source tree of data into memory, use Ruby to dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity."
+      ]
+    },
+    {
+      "company": "Lockheed Martin",
+      "position": "Systems Engineer Asc",
+      "startDate": "2013-04-01",
+      "endDate": "2014-06-01",
+      "summary": "Sundry assignments, most relevant being as a Rails dev, 10/11 – 04/12",
+      "highlights": [
+        "Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow",
+        " Linux OS, Ruby, Ruby on Rails, role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL"
       ]
     }
   ],
@@ -168,7 +178,7 @@
       ]
     },
     {
-      "name": "Ops/Infrastructure,
+      "name": "Ops/Infrastructure",
       "level": "Some experience",
       "keywords": [
         "Docker",
