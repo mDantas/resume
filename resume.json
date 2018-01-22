@@ -113,6 +113,20 @@
       ]
     },
     {
+      "name": "Relational databases",
+      "level": "Experienced",
+      "keywords": [
+        "Postgres",
+        "DB2",
+        "Sql server",
+        "Common table expressions",
+        "Stored procedures",
+        "Views",
+        "Indexes",
+        "Query inspection/design/optimization"
+      ]
+    },
+    {
       "name": "Software Development Lifecycle",
       "level": "Experienced",
       "keywords": [
