@@ -25,7 +25,7 @@
     },
     {
       "company": "Vistaprint",
-      "position": "Software Engineer, Vistaprint Data Warehouse",
+      "position": "Software Engineer, Local Listings product",
       "website": "n/a",
       "startDate": "2015-04-01",
       "endDate": "2017-10-01",
@@ -52,7 +52,19 @@
         "Apache SOLR - FIXME",
         "Sundry bug fixes and small feature tickets."
       ]
-    }
+    },
+		{
+      "company": "Dell @ Executive Office of the President",
+      "position": "Rails developer - Max.gov",
+      "website": "https://max.gov",
+      "startDate": "2013-04-01",
+      "endDate": "2014-06-01",
+      "summary": "Worked on max.gov, a tool to collect human-entered data across agencies (e.g. to compile the federal budget). My main contribution was a fault-tolerant script to migrate tree-subsets of records (order of magnitude, ~100k) from a legacy database with Latin1 encoding to a new databases with UTF8 encoding. A script existed at the time but it was shown to result in data corruption (it did an inconsistently shallow/deep copy) and also could take up to a day or two to run. The new script would run in minutes to hours. The end result could be considered an ETL implemented in Ruby and Rails and was used to migrate all existing federal agencies' data to the new database.",
+      "highlights": [
+        "Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)",
+				"Wrote logic to traverse the application schema (~10 tables), select the entire source tree of data into memory, use Ruby to dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity."
+      ]
+		}
   ],
   "education": [
     {
