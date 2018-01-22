@@ -66,13 +66,30 @@
     {
       "institution": "University of Maryland, College Park",
       "area": "Mathematics",
-      "studyType": "Bachelor",
-      "startDate": "2011-06-01",
-      "endDate": "2014-01-01",
-      "gpa": "4.0",
+      "studyType": "Bachelor of Science",
+      "startDate": "2006-09-01",
+      "endDate": "2011-05-01",
+      "gpa": "3.6",
       "courses": [
-        "DB1101 - Basic SQL",
-        "CS2011 - Java Introduction"
+        "Real analysis",
+				"Quantum physics",
+				"Linear algebra",
+        "Combinatorics",
+        "Cryptology",
+				"Computational methods",
+      ]
+    },
+    {
+      "institution": "University of Maryland, College Park",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2006-09-01",
+      "endDate": "2011-05-01",
+      "gpa": "3.6",
+      "courses": [
+				"Machine Learning",
+        "Algorithms",
+        "Systems Architecture"
       ]
     }
   ],
