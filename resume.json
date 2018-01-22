@@ -67,14 +67,41 @@
     {
       "company": "Lockheed Martin",
       "position": "Systems Engineer Asc",
-      "startDate": "2013-04-01",
+      "startDate": "2011-04-01",
       "endDate": "2014-06-01",
-      "summary": "Sundry assignments, most relevant being as a Rails dev, 10/11 – 04/12",
+      "summary": "Sundry assignments, most relevant being as a Rails dev, 10/11 – 04/12, and then writing JasperReports SQL queries for a different project.",
       "highlights": [
-        "Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow",
-        " Linux OS, Ruby, Ruby on Rails, role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL"
+        "Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. I worked on a CentOS machine and Ruby on Rails, role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL",
+				"Tested and corrected system-generated Jasper reports",
+				"Scripted a domain-specific-language in Python to speed up generation of Jasper reports"
       ]
-    }
+    },
+		{
+			"company": "Booz Allen Hamilton",
+      "position": "Intern",
+			"startDate": "2010-06-01",
+			"endDate": "2010-08-01",
+			"summary": "BAH's cybersecurity summer internship program",
+			"highlights": [
+				"Developed software to gather open-source intelligence as part of a 3 person team",
+				"Presented to fellow interns and employees on the project's outcome",
+				"Skills: web scraping, web crawling, Python"
+			]
+		},
+		{
+			"company": "Institute for Physical Sciences and Technology, University of Maryland College Park",
+      "position": "Undergraduate Researcher",
+			"startDate": "2006-06-01",
+			"endDate": "2009-10-01",
+			"webiste": "http://www.ipst.umd.edu/undergraduate/",
+			"summary": "Built a numerical model of a time-of-flight ion mass spectrometer.",
+			"highlights": [
+				"Independently designed and implemented the simulation of an instrument measuring solar wind composition.",
+				"Designed and prototyped a genetic algorithm to deduce solar wind composition from instrument output spectra",
+				"Authored 70 pages documenting design, development, and usage of the simulator",
+				"Skills: numerical model design, Monte Carlo simulation, genetic algorithms, parameterization of large data sets, automation of data collection and analysis, C, bat scripts, Microsoft VBA, SRIM, technical writing, Java"
+			]
+		}
   ],
   "education": [
     {
