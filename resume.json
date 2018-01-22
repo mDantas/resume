@@ -5,7 +5,7 @@
     "picture": "",
     "email": "mateusdm88@gmail.com",
     "phone": "(202) 753-4966",
-		"summary": "",
+    "summary": "",
     "profiles": [
       {
         "network": "Github",
@@ -26,9 +26,9 @@
         "Tech led a team of 3 in the migration from one third-party backend service provider to another. In numbers, the effort spanned about 4 months of effort, ~100 Jira tickets covering work across the stack, and affected ~40k existing users (and all our new signups).",
         "Refactored the application database schema (~6 tables, ~6 views) from update-driven to event-driven so we could better measure customer impact.",
         "From ideation to implementation, introduced a feature to measure customer impact: as a recurring job, search google for our customers' businesses and check the search results for fuzzy matches of customer-identifying information. This involved using Google's custom search engine API, parsing the JSON, and using the Levenshtein algorithm to find closest matches to specified customer business parameters (e.g. name and zip). I've pasted a link to a small, fun open source contribution that resulted from this work.",
-				"Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
-				"Internationalization (using react-intl)",
-				"Expanding the application's unit test footprint."
+        "Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
+        "Internationalization (using react-intl)",
+        "Expanding the application's unit test footprint."
       ]
     },
     {
@@ -42,9 +42,9 @@
         "A large project that involved designing/leading/implementing the migration of all our users from one third-party backend service provider to another. I met directly with the new 3rd party partners, came up with the architecture to integrate with them, and tech led the migration on a team of ~4 engineers and 2 QE. In numbers, this spanned about 4 months of effort, ~100 Jira tickets, and affected ~40k users.",
         "A medium project to refactor our application database schema to go from an update-driven to an event-driven model so that we could measure the application's effectiveness. This involved updates in application code and schema definition across ~6 tables and the addition of about as many views.",
         "A small/medium project to check our users' appearance in search engine results. This involved using Google's custom search engine API and analysis of the results. I've pasted a link to a small, fun open source contribution that resulted from this work.",
-				"Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
-				"Internationalization (using react-intl)",
-				"Expanding the application's unit test footprint."
+        "Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
+        "Internationalization (using react-intl)",
+        "Expanding the application's unit test footprint."
       ]
     },
     {
@@ -57,8 +57,8 @@
       "highlights": [
         "A Twitter-post integrated Backbone SPA for Social Media Marketing World 2015 (https://www.pagemodo.com/smmw15). This was a thin vertical slice of work, adding tables/models, controller, views, and a Backbone app. The post designer to which I integrated the Twitter-posting experience already existed as a core feature of the Pagemodo product.",
         "Pagemodo teams feature - writing Rails controllers and a Backbone spa FIXME - Marionetter",
-				"Apache SOLR - FIXME",
-				"Sundry bug fixes and small feature tickets."
+        "Apache SOLR - FIXME",
+        "Sundry bug fixes and small feature tickets."
       ]
     }
   ],
@@ -72,11 +72,11 @@
       "gpa": "3.6",
       "courses": [
         "Real analysis",
-				"Quantum physics",
-				"Linear algebra",
+        "Quantum physics",
+        "Linear algebra",
         "Combinatorics",
         "Cryptology",
-				"Computational methods"
+        "Computational methods"
       ]
     },
     {
@@ -87,37 +87,89 @@
       "endDate": "2011-05-01",
       "gpa": "3.6",
       "courses": [
-				"Machine Learning",
+        "Machine Learning",
         "Algorithms",
         "Systems Architecture"
       ]
     }
   ],
-  "awards": [
-    {
-      "title": "Digital Compression Pioneer Award",
-      "date": "2014-11-01",
-      "awarder": "Techcrunch",
-      "summary": "There is no spoon."
-    }
-  ],
   "skills": [
     {
       "name": "Web Development",
-      "level": "Master",
+      "level": "Experienced",
       "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
+        "Express",
+        "Node",
+        "React",
+        "Rails",
+        "Templating",
+        "Creating web APIs",
+        "ORM",
+        "il8n"
       ]
     },
     {
-      "name": "Compression",
-      "level": "Master",
+      "name": "Software Development Lifecycle",
+      "level": "Experienced",
       "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
+        "On-call rotation",
+        "Scrum",
+        "JIRA",
+        "git",
+        "scrum master",
+        "distributed teams"
+      ]
+    },
+    {
+      "name": "Testing",
+      "level": "Experienced",
+      "keywords": [
+        "Stubs",
+        "Spies",
+        "Mocks",
+        "Mocha"
+      ]
+    },
+    {
+      "name": "Ops/Cloud",
+      "level": "Experienced",
+      "keywords": [
+        "Heroku",
+        "Logentries",
+        "NewRelic",
+        "Docker",
+        "Bamboo"
+      ]
+    },
+    { "name": "Data warehousing",
+      "level": "Some experience",
+      "keywords": [
+        "Microsoft Parallel Data Warehouse",
+        "Azure Data Warehouse",
+        "Columnar data storage",
+        "Star schema",
+        "ETL"
+      ]
+    },
+    {
+      "name": "Relational databases",
+      "level": "Experienced",
+      "keywords": [
+        "Postgres",
+        "DB2",
+        "Sql server",
+        "Common table expressions",
+        "Stored procedures",
+        "Views",
+        "Indexes",
+        "Query inspection/design/optimization"
+      ]
+    },
+    {
+      "name": "Functional Languages",
+      "level": "Some experience",
+      "keywords": [
+        "Haskell"
       ]
     }
   ],
@@ -133,10 +185,18 @@
   ],
   "interests": [
     {
-      "name": "Wildlife",
+      "name": "Cycling",
       "keywords": [
-        "Ferrets",
-        "Unicorns"
+        "Crits",
+        "Cyclocross"
+      ]
+    },
+    {
+      "name": "Art",
+      "keywords": [
+        "Theatre",
+        "20th century literature",
+				"Magritte"
       ]
     }
   ]
