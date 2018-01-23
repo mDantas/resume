@@ -5,7 +5,7 @@
     "picture": "",
     "email": "mateusdm88@gmail.com",
     "phone": "(202) 753-4966",
-		"summary": "Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler.",
+    "summary": "Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler.",
     "profiles": [
       {
         "network": "Github",
@@ -21,10 +21,10 @@
       "startDate": "2017-10-01",
       "endDate": "Present",
       "summary": "As part of a two person team, I am getting Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution has been co-creating and now refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work is in Azure Data Warehouse. The data will be used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.",
-			"highlights": [
-				"Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).",
-				"Using change-tracking-replication infrastructure to copy data over for processing."
-			]
+      "highlights": [
+        "Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).",
+        "Using change-tracking-replication infrastructure to copy data over for processing."
+      ]
     },
     {
       "company": "Vistaprint",
@@ -34,11 +34,11 @@
       "endDate": "2017-10-01",
       "summary": "Local Listings is a tool for small businesses to disseminate their contact information to many directories so customers can find them. My technical contributions spanned the Postgres/Express/React/Node stack with a focus on the backend. I was also scrum master for my team and worked closely with the PO on product decisions. I remain on the on-call rotation for this product.",
       "highlights": [
-				"Principal contributor to app codebase.",
+        "Principal contributor to app codebase.",
         "Led a team of 3 engineers and 2 QE in migrating to a new 3rd-party backend service provider. In numbers: 4 months of effort, ~100 Jira tickets covering the entire stack, ~40k existing users affected (in addition to all new signups).",
         "Refactored the database schema from update to event-driven.",
-				"Introduced and implemented a means to measure customer impact: (1) call Google's Custom Search Engine API to search for users' identifying information and (2) process resulting JSON to fuzzy search for the user's presence in results. Track changes in search result appearances over time to determine whether Local Listings improves users' appearance in organic search results.",
-				"A (small) open source contribution - Augmented an existing Node library's Levenshtein implementation to handle fuzzy searching (https://github.com/NaturalNode/natural/pull/360).",
+        "Introduced and implemented a means to measure customer impact: (1) call Google's Custom Search Engine API to search for users' identifying information and (2) process resulting JSON to fuzzy search for the user's presence in results. Track changes in search result appearances over time to determine whether Local Listings improves users' appearance in organic search results.",
+        "A (small) open source contribution - Augmented an existing Node library's Levenshtein implementation to handle fuzzy searching (https://github.com/NaturalNode/natural/pull/360).",
         "Internationalization (using react-intl). Internationalized application frontend for future expansion to arbitrary locales.",
         "Expanded the application's unit test footprint ~5x."
       ]
@@ -62,10 +62,10 @@
       "website": "https://max.gov",
       "startDate": "2013-04-01",
       "endDate": "2014-06-01",
-      "summary": "Max.gov is a tool to collect human-entered data across Federal agencies (e.g. to compile the federal budget). When I left, it had ~100k users. Brought on as an individual feature contributor, I eventually became the sole developer as a result of team restructuring. I interacted extensively directly with government clients to script ad-hoc data needs. My main contribution turned out to be, in effect, an ETl written in Rails. This script was needed to migrate individual tree-subsets of user data (order of magnitude, ~100k records) from a legacy database with Latin1 encoding a new database with UTF8 encoding. The following highlights are in reference to this script.",
+      "summary": "Max.gov is a tool to collect human-entered data across Federal agencies (e.g. to compile the federal budget). When I left, it had ~100k users. Brought on as an individual feature contributor, I eventually became the sole developer as a result of team restructuring. I interacted extensively directly with government clients to script ad-hoc data needs. My main contribution turned out to be, in effect, an ETL written in Rails. This script was needed to migrate individual tree-subsets of user data (order of magnitude, ~100k records) from a legacy database with Latin1 encoding a new database with UTF8 encoding. The following highlights are in reference to this script.",
       "highlights": [
-				"Outperformed pre-existing script in speed by up to two orders of magnitude (days to minutes).",
-				"Outperformed pre-existing script in correctness - whereas the latter would perform inconsistently deep/shallow copies of data, thoughtful design and testing ensured that this script did not.",
+        "Outperformed pre-existing script in speed by up to two orders of magnitude (days to minutes).",
+        "Outperformed pre-existing script in correctness - whereas the latter would perform inconsistently deep/shallow copies of data, thoughtful design and testing ensured that this script did not.",
         "Script was used to migrate mission-critical user data on a per-user basis to the new database.",
         "Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)",
         "Wrote logic in Ruby to: (1) traverse the application schema (~10 tables) from a given root record, (2) select the entire source tree of data into memory, (3) dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity, and (4) validate integrity of the copy."
@@ -79,35 +79,35 @@
       "summary": "Sundry assignments, most relevantly (1) as a Rails dev for 6 months and then (2) writing JasperReports SQL queries for a different project.",
       "highlights": [
         "Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. This was a Ruby on Rails app with MySQL database and vanilla Rails templates and jQuery on the frontend. Tools/tech involved: role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL",
-				"Tested and corrected system-generated Jasper reports",
-				"Scripted a domain-specific-language in Python to speed up generation of Jasper reports"
+        "Tested and corrected system-generated Jasper reports",
+        "Scripted a domain-specific-language in Python to speed up generation of Jasper reports"
       ]
     },
-		{
-			"company": "Booz Allen Hamilton",
+    {
+      "company": "Booz Allen Hamilton",
       "position": "Intern",
-			"startDate": "2010-06-01",
-			"endDate": "2010-08-01",
-			"summary": "BAH's cybersecurity summer internship program",
-			"highlights": [
-				"Developed software to gather open-source intelligence as part of a 3 person team",
-				"Presented to fellow interns and employees on the project's outcome",
-				"Skills: web scraping, web crawling, Python"
-			]
-		},
-		{
-			"company": "Institute for Physical Sciences and Technology",
+      "startDate": "2010-06-01",
+      "endDate": "2010-08-01",
+      "summary": "BAH's cybersecurity summer internship program",
+      "highlights": [
+        "Developed software to gather open-source intelligence as part of a 3 person team",
+        "Presented to fellow interns and employees on the project's outcome",
+        "Skills: web scraping, web crawling, Python"
+      ]
+    },
+    {
+      "company": "Institute for Physical Sciences and Technology",
       "position": "Undergraduate Researcher",
-			"startDate": "2006-06-01",
-			"endDate": "2009-10-01",
-			"webiste": "http://www.ipst.umd.edu/undergraduate/",
-			"summary": "Built a numerical model of a time-of-flight (ToF IMS) ion mass spectrometer. ToF IMS are used to measure solar wind composition. For an example diagram, see https://www2.mps.mpg.de/images/projekte/bepicolombo/mppe/mppe10.jpg. Input to the simulator was a specific solar wind composition. Output constituted histograms describing measurements from 3 instrument components. The simulation used lookup-tables of parameters describing these output histograms. These tables were populated using data collected from physics simulation software (SIMION and SRIM) and parametrized with scripts in Microsoft VBA.",
-			"highlights": [
-				"Independently designed and implemented the simulation (in C) of an instrument measuring solar wind composition.",
-				"Designed and prototyped a genetic algorithm in Java to infer solar wind composition from instrument output spectra.",
-				"Authored 70 pages documenting design, development, and usage of the simulator."
-			]
-		}
+      "startDate": "2006-06-01",
+      "endDate": "2009-10-01",
+      "webiste": "http://www.ipst.umd.edu/undergraduate/",
+      "summary": "Built a numerical model of a time-of-flight (ToF IMS) ion mass spectrometer. ToF IMS are used to measure solar wind composition. For an example diagram, see https://www2.mps.mpg.de/images/projekte/bepicolombo/mppe/mppe10.jpg. Input to the simulator was a specific solar wind composition. Output constituted histograms describing measurements from 3 instrument components. The simulation used lookup-tables of parameters describing these output histograms. These tables were populated using data collected from physics simulation software (SIMION and SRIM) and parametrized with scripts in Microsoft VBA.",
+      "highlights": [
+        "Independently designed and implemented the simulation (in C) of an instrument measuring solar wind composition.",
+        "Designed and prototyped a genetic algorithm in Java to infer solar wind composition from instrument output spectra.",
+        "Authored 70 pages documenting design, development, and usage of the simulator."
+      ]
+    }
   ],
   "education": [
     {
@@ -218,15 +218,15 @@
         "Bamboo"
       ]
     },
-		{
-			"name": "Data science / Numerical Simulations",
-			"level": "Some experience",
-			"keywords": [
-				"Monte Carlo simulation",
-				"Genetic algorithms",
-				"Parametrizing data sets"
-			]
-		},
+    {
+      "name": "Data science / Numerical Simulations",
+      "level": "Some experience",
+      "keywords": [
+        "Monte Carlo simulation",
+        "Genetic algorithms",
+        "Parametrizing data sets"
+      ]
+    },
     {
       "name": "Functional Languages",
       "level": "Some experience",
