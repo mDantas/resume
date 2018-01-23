@@ -1,0 +1,1315 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Matthew Dantas-McCutcheon</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: #40484f;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.46153846;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    display: block;
+    margin-bottom: 1.3em;
+}
+
+a {
+    color: #0095ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0c65a5;
+    text-decoration: underline;
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1.3em;
+}
+
+.highlights>li>p {
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.67rem;
+}
+
+h3 {
+    font-size: 1.27rem;
+}
+
+em {
+    color: #757575;
+}
+
+blockquote {
+    margin-bottom: 1em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* main container */
+
+#resume {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* every section wrapper */
+
+.section {
+    margin-bottom: 1rem;
+}
+
+section .location {
+    margin-right: .5em;
+    color: #606d76;
+    font-weight: 700;
+}
+
+#contact {
+    margin-top: .5rem;
+}
+
+#profiles .item {
+    padding: 0;
+}
+
+#header>#profiles,
+#header>#contact,
+#skills,
+#languages,
+#interests {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+#header>div {
+    line-height: 1.5;
+}
+
+#header>div>div {
+    margin-right: 1.2em;
+}
+
+#header h1.name {
+    font-size: 2.8rem;
+    font-weight: 100;
+    line-height: 100%;
+}
+
+#header h2.label {
+    color: #202931;
+    font-size: 1.47rem;
+    font-weight: 300;
+}
+
+#header .picture {
+    width: 11em;
+    float: right;
+    border-radius: 4px;
+}
+
+.main-summary {
+    background: #f1f8ff;
+    padding: 1.2em 1em;
+    margin-top: 1rem;
+}
+
+.main-summary p {
+    margin: .15em 0 0;
+}
+
+h2.section-title {
+    display: inline-block;
+    background: #fff;
+    padding: 0 1em 0.3em 0;
+    color: #ff6d1f;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    font-size: .9rem;
+}
+
+.section>header {
+    position: relative;
+}
+
+.fa {
+    margin-right: 0.25em;
+}
+
+.section>header::after {
+    position: absolute;
+    left: 0;
+    top: .7em;
+    height: 1px;
+    background: #ccc;
+    content: "";
+    width: 100%;
+    z-index: -100;
+    display: block;
+}
+
+.section.main-summary>section {
+    margin: 0;
+}
+
+.section>section>header {
+    font-size: 1.38rem;
+    position: relative;
+    margin-top: .7em;
+}
+
+.section>section>header:first-of-type {
+    margin: 0;
+}
+
+.section>section>header .space-left {
+    position: absolute;
+    left: -1.56rem;
+    top: 5px;
+    color: #aaa;
+    line-height: 1;
+    opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+    display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+    font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+    content: "at "
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+    color: #606d76;
+    font-weight: 400;
+}
+
+.section header .date {
+    font-size: 1rem;
+    display: inline-table;
+    padding: .1em 0;
+    font-weight: 600;
+}
+
+ul.keywords,
+ul.courses {
+    margin-top: .5em;
+}
+
+ul.keywords li,
+ul.courses li {
+    display: inline-block;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    font-size: .9rem;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #3e6d8e;
+    background-color: #dfeaf1;
+    border: 0 solid #dfeaf1;
+    white-space: nowrap;
+}
+
+ul.keywords li:hover,
+ul.courses li:hover {
+    background: #dfeaf0;
+}
+
+.item {
+    padding: .5em 0;
+}
+
+.gpa {
+    padding-bottom: .5em;
+}
+
+.fa.social {
+    font-size: 1.1em;
+}
+
+
+/* Social Media Brand Colors */
+
+.google-plus {
+    color: #dd4b39;
+}
+
+.tumblr {
+    color: #32506d;
+}
+
+.foursquare {
+    color: #0072b1;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.linkedin {
+    color: #007bb6;
+}
+
+.pinterest {
+    color: #cb2027;
+}
+
+.dribbble {
+    color: #ea4c89;
+}
+
+.instagram {
+    color: #517fa4;
+}
+
+.twitter {
+    color: #00aced;
+}
+
+.soundcloud {
+    color: #ff3a00;
+}
+
+.wordpress {
+    color: #21759b;
+}
+
+.youtube {
+    color: #bb0000;
+}
+
+.github {
+    color: #171515;
+}
+
+.stack-overflow {
+    color: #828386;
+    position: relative;
+}
+
+.flickr {
+    color: #ff0084;
+}
+
+.stack-overflow::after {
+    position: absolute;
+    left: 0;
+    content: '\f16c';
+    color: #f68a1f;
+    overflow: hidden;
+    height: 100%;
+}
+
+.telegram {
+    color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+    width: 15em;
+    padding: 0 .5em .5em 0;
+    border-bottom: none;
+}
+
+#skills .item {
+    width: 16em;
+}
+
+#skills .item .keywords {
+    width: 15em;
+}
+
+
+/* Skill chart */
+
+.level {
+    margin-bottom: .5em;
+}
+
+.level .bar {
+    border: 1px solid #ddd;
+    display: block;
+    width: 10em;
+    height: 5px;
+    position: relative;
+}
+
+.level .bar::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    background: black;
+    height: 5px;
+}
+
+.level.beginner .bar::after {
+    background: #EB5F51;
+    width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+    background: #ffdf1f;
+    width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+    background: #5CB85C;
+    width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+    background: #59C596;
+    width: 10em;
+}
+
+#references .item {
+    padding-left: .5em;
+    border-left: 5px solid #ff6d1f;
+}
+
+.toggle-item {
+  visibility: hidden;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.display {
+    display: block;
+    opacity: 1 !important;
+}
+
+.margin1 {
+    margin-bottom: .5rem;
+}
+
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+    #resume {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+    li {
+        margin-left: 1.5em;
+    }
+    #resume {
+        width: 820px;
+        margin: 2rem auto;      
+    }
+    .section>section>header .space-left {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .section>section {
+        margin-left: 1.67rem;
+    }
+    .toggle-item {
+        transform: translate(-9999px);
+    }
+    .toggle-item+label {
+        display: block;
+        margin-top: -16px;
+    }
+    .toggle-item:checked+label:after {
+        content: '\f0d7';
+    }
+    .toggle-item+label:after {
+        float: left;
+        cursor: pointer;
+        margin-left: -20px;
+        color: #aaa;
+        font-size: 16px;
+        content: '\f0da';
+        font-family: Fontawesome;
+    }
+    .toggle-item~.item {
+        height: 0;
+        opacity: 0;
+    }
+    .toggle-item:checked~.item {
+        height: auto;
+        opacity: 1;
+        transition: all .5s linear;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "| ";
+    }
+    .header-left {
+        float: left;
+        width: 70%;
+        word-break: normal;
+    }
+    .section header .date {
+        float: right;
+        padding: .2em;
+    }
+    .display {
+        display: none;
+    }
+    .display:not(.none) {
+        display: block;
+    }
+}
+
+@media print {
+    #resume {
+        margin: 0;
+        padding: 0;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 1.3;
+        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
+    }
+    @page {
+        margin: 1cm 1.4cm;
+    }
+    .item-count {
+        display: none;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "at ";
+    }
+    .main-summary {
+        padding: 2rem 0;
+    }
+    .section {
+        margin: .8rem 0;
+        padding: 0;
+    }
+    .section header {
+        padding-bottom: .15rem;
+    }
+    .section .location {
+        padding-bottom: .15rem;
+    }
+    .stack-overflow::after {
+        content: "";
+    }
+    .fa.social {
+        color: #828386;
+    }
+    ul {
+        margin-top: .4em;
+    }
+    ul,
+    li {
+        padding: 0;
+    }
+    ul.keywords li,
+    ul.courses li {
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
+        text-transform: lowercase;
+    }
+    ul.keywords li::after,
+    ul.courses li::after {
+        padding: 0 0 0 .1rem;
+        content: " |";
+    }
+    ul.keywords::before,
+    ul.courses::before {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    ul.keywords::before {
+        content: "Skills acquired: ";
+    }
+    #skills .keywords::before {
+        content: '';
+    }
+    .section p {
+        margin: 0;
+        padding: 0;
+    }
+    ul.courses::before {
+        content: "Major courses: ";
+    }
+    ul.keywords li:last-of-type::after,
+    ul.courses li:last-of-type::after {
+        content: "";
+    }
+    .level em {
+        font-style: normal;
+        padding: .1em 0;
+    }
+    .level .bar {
+        display: none;
+    }
+    #profiles .item {
+        padding: 0;
+    }
+    .item.display {
+        display: block;
+        opacity: 1 !important;
+    }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Matthew Dantas-McCutcheon</h1>
+    			<h2 class="label">Software Engineer</h2>
+    		</div>
+    		
+    		
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="fa fa-envelope-o"></span>
+    				<a href="mailto:mateusdm88@gmail.com">mateusdm88@gmail.com</a>
+    			</div>
+    			<div class="phone">
+    				<span class="fa fa-mobile"></span>
+    				<a href="tel:(202) 753-4966">(202) 753-4966</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fa fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/mDantas">mDantas</a>
+    					</span> 
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section main-summary">
+    		<section>
+    			<div><p>Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler.</p></div>
+    		</section>
+    	</section>
+    
+    <section class="section margin1">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Web Development
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Express</li>
+    				<li>Node</li>
+    				<li>React</li>
+    				<li>Rails</li>
+    				<li>Templating</li>
+    				<li>Creating and consuming web APIs</li>
+    				<li>ORM</li>
+    				<li>il8n</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Relational databases
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Postgres</li>
+    				<li>DB2</li>
+    				<li>Sql server</li>
+    				<li>Common table expressions</li>
+    				<li>Stored procedures</li>
+    				<li>Views</li>
+    				<li>Indexes</li>
+    				<li>Query inspection/design/optimization</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Software Development Lifecycle
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>On-call rotation</li>
+    				<li>Scrum</li>
+    				<li>JIRA</li>
+    				<li>git</li>
+    				<li>scrum master</li>
+    				<li>distributed teams</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Ops/Cloud
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Heroku</li>
+    				<li>Logentries</li>
+    				<li>NewRelic</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Testing
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Stubs</li>
+    				<li>Spies</li>
+    				<li>Mocks</li>
+    				<li>Mocha</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Data warehousing
+    			</h3>
+    			 
+    			<div class="level some experience">
+    				<em>Some experience</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Microsoft Parallel Data Warehouse</li>
+    				<li>Azure Data Warehouse</li>
+    				<li>Columnar data storage</li>
+    				<li>Star schema</li>
+    				<li>ETL</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Ops/Infrastructure
+    			</h3>
+    			 
+    			<div class="level some experience">
+    				<em>Some experience</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Docker</li>
+    				<li>Bamboo</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Data science / Numerical Simulations
+    			</h3>
+    			 
+    			<div class="level some experience">
+    				<em>Some experience</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Monte Carlo simulation</li>
+    				<li>Genetic algorithms</li>
+    				<li>Parametrizing data sets</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Functional Languages
+    			</h3>
+    			 
+    			<div class="level some experience">
+    				<em>Some experience</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Haskell</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer, Vistaprint Data Warehouse</div>
+    				<div class="company">Vistaprint</div>
+    				<div class="date">
+    				  <span class="startDate">October 2017</span> 
+    					<span class="endDate">- Current</span>
+    				</div>
+    			</header>
+    			
+         	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>As part of a two person team, I am getting Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution has been co-creating and now refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work is in Azure Data Warehouse. The data will be used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).</p></li>
+                <li><p>Using change-tracking-replication infrastructure to copy data over for processing.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-1" type="checkbox" class="toggle-item" />
+            <label for="work-item-1"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer, Local Listings product</div>
+    				<div class="company">Vistaprint</div>
+    				<div class="date">
+    				  <span class="startDate">April 2015</span> 
+    					<span class="endDate">- October 2017</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="www.vistaprint.com/local-listings.aspx">www.vistaprint.com/local-listings.aspx</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Local Listings is a tool for small businesses to disseminate their contact information to many directories so customers can find them. My technical contributions spanned the Postgres/Express/React/Node stack with a focus on the backend. I was also scrum master for my team and worked closely with the PO on product decisions. I remain on the on-call rotation for this product.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Principal contributor to app codebase.</p></li>
+                <li><p>Led a team of 3 engineers and 2 QE in migrating to a new 3rd-party backend service provider. In numbers: 4 months of effort, ~100 Jira tickets covering the entire stack, ~40k existing users affected (in addition to all new signups).</p></li>
+                <li><p>Refactored the database schema from update to event-driven.</p></li>
+                <li><p>Introduced and implemented a means to measure customer impact: (1) call Google's Custom Search Engine API to search for users' identifying information and (2) process resulting JSON to fuzzy search for the user's presence in results. Track changes in search result appearances over time to determine whether Local Listings improves users' appearance in organic search results.</p></li>
+                <li><p>A (small) open source contribution - Augmented an existing Node library's Levenshtein implementation to handle fuzzy searching (https://github.com/NaturalNode/natural/pull/360).</p></li>
+                <li><p>Internationalization (using react-intl). Internationalized application frontend for future expansion to arbitrary locales.</p></li>
+                <li><p>Expanded the application's unit test footprint ~5x.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-2" type="checkbox" class="toggle-item" />
+            <label for="work-item-2"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer, Pagemodo product</div>
+    				<div class="company">Vistaprint</div>
+    				<div class="date">
+    				  <span class="startDate">June 2014</span> 
+    					<span class="endDate">- April 2015</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="http://www.pagemodo.com">http://www.pagemodo.com</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Pagemodo is a one-stop-shop social media marketing tool targeted at small businesses. It is a Rails app with postgres db hosted on Heroku with a mix of Marionette/Backbone & React on the frontend.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>A Tweet-integrated Marionette Backbone SPA for Social Media Marketing World 2015 (https://www.pagemodo.com/smmw15). This was a thin vertical slice of work, adding tables/models, controller, views, and a Backbone app. Note that the 'post designer' to which I integrated the Twitter-posting experience already existed as a core feature of the Pagemodo product.</p></li>
+                <li><p>A short stint working on our Apache SOLR integration to improve our content recommendation to users.</p></li>
+                <li><p>Sundry bug fixes and small and medium feature tickets across the stack.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-3" type="checkbox" class="toggle-item" />
+            <label for="work-item-3"></label>
+    
+    			<header>
+    				<div class="position">Rails developer - Max.gov</div>
+    				<div class="company">Dell @ Executive Office of the President</div>
+    				<div class="date">
+    				  <span class="startDate">April 2013</span> 
+    					<span class="endDate">- June 2014</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="https://max.gov">https://max.gov</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Max.gov is a tool to collect human-entered data across Federal agencies (e.g. to compile the federal budget). When I left, it had ~100k users. Brought on as an individual feature contributor, I eventually became the sole developer as a result of team restructuring. I interacted extensively directly with government clients to script ad-hoc data needs. My main contribution turned out to be, in effect, an ETL written in Rails. This script was needed to migrate individual tree-subsets of user data (order of magnitude, ~100k records) from a legacy database with Latin1 encoding a new database with UTF8 encoding. The following highlights are in reference to this script.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Outperformed pre-existing script in speed by up to two orders of magnitude (days to minutes).</p></li>
+                <li><p>Outperformed pre-existing script in correctness - whereas the latter would perform inconsistently deep/shallow copies of data, thoughtful design and testing ensured that this script did not.</p></li>
+                <li><p>Script was used to migrate mission-critical user data on a per-user basis to the new database.</p></li>
+                <li><p>Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)</p></li>
+                <li><p>Wrote logic in Ruby to: (1) traverse the application schema (~10 tables) from a given root record, (2) select the entire source tree of data into memory, (3) dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity, and (4) validate integrity of the copy.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-4" type="checkbox" class="toggle-item" />
+            <label for="work-item-4"></label>
+    
+    			<header>
+    				<div class="position">Systems Engineer Asc</div>
+    				<div class="company">Lockheed Martin</div>
+    				<div class="date">
+    				  <span class="startDate">April 2011</span> 
+    					<span class="endDate">- June 2014</span> 
+    				</div>
+    			</header>
+    			
+         	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Sundry assignments, most relevantly (1) as a Rails dev for 6 months and then (2) writing JasperReports SQL queries for a different project.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. This was a Ruby on Rails app with MySQL database and vanilla Rails templates and jQuery on the frontend. Tools/tech involved: role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL</p></li>
+                <li><p>Tested and corrected system-generated Jasper reports</p></li>
+                <li><p>Scripted a domain-specific-language in Python to speed up generation of Jasper reports</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-5" type="checkbox" class="toggle-item" />
+            <label for="work-item-5"></label>
+    
+    			<header>
+    				<div class="position">Intern</div>
+    				<div class="company">Booz Allen Hamilton</div>
+    				<div class="date">
+    				  <span class="startDate">June 2010</span> 
+    					<span class="endDate">- August 2010</span> 
+    				</div>
+    			</header>
+    			
+         	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>BAH's cybersecurity summer internship program</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Developed software to gather open-source intelligence as part of a 3 person team</p></li>
+                <li><p>Presented to fellow interns and employees on the project's outcome</p></li>
+                <li><p>Skills: web scraping, web crawling, Python</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-6" type="checkbox" class="toggle-item" />
+            <label for="work-item-6"></label>
+    
+    			<header>
+    				<div class="position">Undergraduate Researcher</div>
+    				<div class="company">Institute for Physical Sciences and Technology</div>
+    				<div class="date">
+    				  <span class="startDate">June 2006</span> 
+    					<span class="endDate">- October 2009</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="http://www.ipst.umd.edu/undergraduate/">http://www.ipst.umd.edu/undergraduate/</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>Built a numerical model of a time-of-flight (ToF IMS) ion mass spectrometer. ToF IMS are used to measure solar wind composition. For an example diagram, see https://www2.mps.mpg.de/images/projekte/bepicolombo/mppe/mppe10.jpg. Input to the simulator was a specific solar wind composition. Output constituted histograms describing measurements from 3 instrument components. The simulation used lookup-tables of parameters describing these output histograms. These tables were populated using data collected from physics simulation software (SIMION and SRIM) and parametrized with scripts in Microsoft VBA.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Independently designed and implemented the simulation (in C) of an instrument measuring solar wind composition.</p></li>
+                <li><p>Designed and prototyped a genetic algorithm in Java to infer solar wind composition from instrument output spectra.</p></li>
+                <li><p>Authored 70 pages documenting design, development, and usage of the simulator.</p></li>
+            </ul>
+        	</div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(2)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header>
+            <div class="header-left">
+              <div class="studyType">
+                Bachelor of Science
+              </div>
+              <div class="area">
+                Mathematics
+              </div>
+              <div class="institution">
+                University of Maryland, College Park
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              2006
+              </span>
+              <span class="endDate">
+              - 2011
+              </span>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Real analysis</li>
+            <li>Quantum physics</li>
+            <li>Linear algebra</li>
+            <li>Combinatorics</li>
+            <li>Cryptology</li>
+            <li>Computational methods</li>
+          </ul>
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> Grade:</strong> <span>3.6</span>
+            </div>
+          </div>
+        </section>
+        <section class="education-item">
+          <header>
+            <div class="header-left">
+              <div class="studyType">
+                Bachelor of Science
+              </div>
+              <div class="area">
+                Computer Science
+              </div>
+              <div class="institution">
+                University of Maryland, College Park
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              2006
+              </span>
+              <span class="endDate">
+              - 2011
+              </span>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Machine Learning</li>
+            <li>Algorithms</li>
+            <li>Systems Architecture</li>
+          </ul>
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> Grade:</strong> <span>3.6</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section margin1">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            Portuguese
+          </h3>
+          <div class="item">
+            <div class="level fluency native fluency">
+              <em>Native fluency</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            French
+          </h3>
+          <div class="item">
+            <div class="level fluency professional proficiency">
+              <em>Professional proficiency</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="section margin1">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Cycling
+          </h3>
+          <ul class="keywords">
+            <li>Crits</li>
+            <li>Cyclocross</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Art
+          </h3>
+          <ul class="keywords">
+            <li>Theatre</li>
+            <li>20th century literature</li>
+            <li>Magritte</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Recreational Math
+          </h3>
+          <ul class="keywords">
+            <li>ProjectEuler</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+  </body>
+</html>
