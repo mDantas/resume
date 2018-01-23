@@ -62,10 +62,13 @@
       "website": "https://max.gov",
       "startDate": "2013-04-01",
       "endDate": "2014-06-01",
-      "summary": "Worked on max.gov, a tool to collect human-entered data across agencies (e.g. to compile the federal budget). My main contribution was a fault-tolerant script to migrate tree-subsets of records (order of magnitude, ~100k) from a legacy database with Latin1 encoding to a new databases with UTF8 encoding. A script existed at the time but it was shown to result in data corruption (it did an inconsistently shallow/deep copy) and also could take up to a day or two to run. The new script would run in minutes to hours. The end result could be considered an ETL implemented in Ruby and Rails and was used to migrate all existing federal agencies' data to the new database.",
+      "summary": "Max.gov is a tool to collect human-entered data across Federal agencies (e.g. to compile the federal budget). When I left, it had ~100k users. Brought on as an individual feature contributor, I eventually became the sole developer as a result of team restructuring. I interacted extensively directly with government clients to script ad-hoc data needs. My main contribution turned out to be, in effect, an ETl written in Rails. This script was needed to migrate individual tree-subsets of user data (order of magnitude, ~100k records) from a legacy database with Latin1 encoding a new database with UTF8 encoding. The following highlights are in reference to this script.",
       "highlights": [
+				"Outperformed pre-existing script in speed by up to two orders of magnitude (days to minutes).",
+				"Outperformed pre-existing script in correctness - whereas the latter would perform inconsistently deep/shallow copies of data, thoughtful design and testing ensured that this script did not.",
+        "Script was used to migrate mission-critical user data on a per-user basis to the new database.",
         "Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)",
-        "Wrote logic to traverse the application schema (~10 tables), select the entire source tree of data into memory, use Ruby to dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity."
+        "Wrote logic in Ruby to: (1) traverse the application schema (~10 tables) from a given root record, (2) select the entire source tree of data into memory, (3) dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity, and (4) validate integrity of the copy."
       ]
     },
     {
