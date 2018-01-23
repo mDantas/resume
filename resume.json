@@ -143,14 +143,14 @@
   "skills": [
     {
       "name": "Web Development",
-      "level": "Experienced",
+      "level": "Very Experienced",
       "keywords": [
         "Express",
         "Node",
         "React",
         "Rails",
         "Templating",
-        "Creating web APIs",
+        "Creating and consuming web APIs",
         "ORM",
         "il8n"
       ]
@@ -218,6 +218,15 @@
         "Bamboo"
       ]
     },
+		{
+			"name": "Data science / Numerical Simulations",
+			"level": "Some experience",
+			"keywords": [
+				"Monte Carlo simulation",
+				"Genetic algorithms",
+				"Parametrizing data sets"
+			]
+		},
     {
       "name": "Functional Languages",
       "level": "Some experience",
