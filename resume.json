@@ -76,9 +76,9 @@
       "position": "Systems Engineer Asc",
       "startDate": "2011-04-01",
       "endDate": "2014-06-01",
-      "summary": "Sundry assignments, most relevant being as a Rails dev, 10/11 – 04/12, and then writing JasperReports SQL queries for a different project.",
+      "summary": "Sundry assignments, most relevantly (1) as a Rails dev for 6 months and then (2) writing JasperReports SQL queries for a different project.",
       "highlights": [
-        "Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. I worked on a CentOS machine and Ruby on Rails, role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL",
+        "Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. This was a Ruby on Rails app with MySQL database and vanilla Rails templates and jQuery on the frontend. Tools/tech involved: role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL",
 				"Tested and corrected system-generated Jasper reports",
 				"Scripted a domain-specific-language in Python to speed up generation of Jasper reports"
       ]
