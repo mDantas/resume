@@ -32,14 +32,15 @@
       "website": "www.vistaprint.com/local-listings.aspx",
       "startDate": "2015-04-01",
       "endDate": "2017-10-01",
-      "summary": "I worked on Vistaprint's Local Listings product, a tool for small businesses to disseminate their contact information across various platforms so customers can find them. My contributions spanned a Postgres/Express/React/Node stack with a focus on the backend. I was scrum master for my team, participated in core product decisions, became the app's principal contributor, and am on the on-call rotation.",
+      "summary": "Local Listings is a tool for small businesses to disseminate their contact information to many directories so customers can find them. My technical contributions spanned the Postgres/Express/React/Node stack with a focus on the backend. I was also scrum master for my team and worked closely with the PO on product decisions. I remain on the on-call rotation for this product.",
       "highlights": [
-        "Tech led a team of 3 in the migration from one third-party backend service provider to another. In numbers, the effort spanned about 4 months of effort, ~100 Jira tickets covering work across the stack, and affected ~40k existing users (and all our new signups).",
-        "Refactored the application database schema (~6 tables, ~6 views) from update-driven to event-driven so we could better measure customer impact.",
-        "From ideation to implementation, introduced a method to measure customer impact: as a recurring job, search google for our customers' businesses and check the search results for fuzzy matches of customer-identifying information. This involved using Google's custom search engine API, parsing the JSON, and using the Levenshtein algorithm to find closest matches to specified customer business parameters (e.g. name and zip). I've pasted a link to a small, fun open source contribution that resulted from this work.",
-        "Wep-API-related engineering: writing request.js-based clients, processing JSON, ad-hoc analysis of 3rd party partner data (curl + jq and then dumping that data to postgres to perform queries across our data & partner data). This was not an isolated project but rather a significant part of the bread-and-butter of working on the Local Listings app.",
-        "Internationalization (using react-intl)",
-        "Expanding the application's unit test footprint."
+				"Principal contributor to app codebase.",
+        "Led a team of 3 engineers and 2 QE in migrating to a new 3rd-party backend service provider. In numbers: 4 months of effort, ~100 Jira tickets covering the entire stack, ~40k existing users affected (in addition to all new signups).",
+        "Refactored the database schema from update to event-driven.",
+				"Introduced and implemented a means to measure customer impact: (1) call Google's Custom Search Engine API to search for users' identifying information and (2) process resulting JSON to fuzzy search for the user's presence in results. Track changes in search result appearances over time to determine whether Local Listings improves users' appearance in organic search results.",
+				"A (small) open source contribution - Augmented an existing Node library's Levenshtein implementation to handle fuzzy searching (https://github.com/NaturalNode/natural/pull/360).",
+        "Internationalization (using react-intl). Internationalized application frontend for future expansion to arbitrary locales.",
+        "Expanded the application's unit test footprint ~5x."
       ]
     },
     {
