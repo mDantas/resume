@@ -96,17 +96,16 @@
 			]
 		},
 		{
-			"company": "Institute for Physical Sciences and Technology, University of Maryland College Park",
+			"company": "Institute for Physical Sciences and Technology",
       "position": "Undergraduate Researcher",
 			"startDate": "2006-06-01",
 			"endDate": "2009-10-01",
 			"webiste": "http://www.ipst.umd.edu/undergraduate/",
-			"summary": "Built a numerical model of a time-of-flight ion mass spectrometer.",
+			"summary": "Built a numerical model of a time-of-flight (ToF IMS) ion mass spectrometer. ToF IMS are used to measure solar wind composition. For an example diagram, see https://www2.mps.mpg.de/images/projekte/bepicolombo/mppe/mppe10.jpg. Input to the simulator was a specific solar wind composition. Output constituted histograms describing measurements from 3 instrument components. The simulation used lookup-tables of parameters describing these output histograms. These tables were populated using data collected from physics simulation software (SIMION and SRIM) and parametrized with scripts in Microsoft VBA.",
 			"highlights": [
-				"Independently designed and implemented the simulation of an instrument measuring solar wind composition.",
-				"Designed and prototyped a genetic algorithm to deduce solar wind composition from instrument output spectra",
-				"Authored 70 pages documenting design, development, and usage of the simulator",
-				"Skills: numerical model design, Monte Carlo simulation, genetic algorithms, parameterization of large data sets, automation of data collection and analysis, C, bat scripts, Microsoft VBA, SRIM, technical writing, Java"
+				"Independently designed and implemented the simulation (in C) of an instrument measuring solar wind composition.",
+				"Designed and prototyped a genetic algorithm in Java to infer solar wind composition from instrument output spectra.",
+				"Authored 70 pages documenting design, development, and usage of the simulator."
 			]
 		}
   ],
