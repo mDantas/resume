@@ -36,7 +36,7 @@
       "position": "Software Engineer, Vistaprint Data Warehouse",
       "startDate": "2017-10-01",
       "endDate": "2018-03-01",
-      "summary": "As part of a two person team, I am getting Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution has been co-creating and now refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work is in Azure Data Warehouse. The data will be used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.",
+      "summary": "As part of a two person team, I ETL'd Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution was co-creating and refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work was in Azure Data Warehouse. The data was used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.",
       "highlights": [
         "Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).",
         "Using change-tracking-replication infrastructure to copy data over for processing."
