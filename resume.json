@@ -158,6 +158,19 @@
   ],
   "skills": [
     {
+      "name": "Data Pipeline",
+      "level": "Experienced",
+      "keywords": [
+        "Dataflow (Apache Beam)",
+        "BigQuery",
+        "ETL/ELT",
+        "Redshift",
+        "Microsoft PDW",
+				"Columnar storage",
+				"Timeseries databases (Apache Druid)"
+      ]
+    },
+    {
       "name": "Google Cloud",
       "level": "Experienced",
       "keywords": [
@@ -258,18 +271,6 @@
         "Spies",
         "Mocks",
         "Mocha"
-      ]
-    },
-    { "name": "Data warehousing",
-      "level": "Some experience",
-      "keywords": [
-        "Microsoft Parallel Data Warehouse",
-        "Azure Data Warehouse",
-				"BigQuery",
-				"Redshift",
-        "Columnar data storage",
-        "Star schema",
-        "ETL/ELT"
       ]
     },
     {
