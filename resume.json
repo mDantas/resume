@@ -4,7 +4,7 @@
     "label": "Software Engineer",
     "picture": "",
     "email": "mateusdm88@gmail.com",
-    "summary": "Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading teams and tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler. I can just ",
+    "summary": "Software engineer, problem-solver, rapid learner, high-impact leader and individual contributor. I am interested in expanding on my experience handling and processing internet-scale traffic.",
     "profiles": [
       {
         "network": "Github",
@@ -19,12 +19,16 @@
       "position": "Infrastructure Team Lead",
       "startDate": "2018-03-01",
       "endDate": "2019-05-24",
-      "summary": "I productionalized the company's data platform. When I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting. My contributions spanned the following hosting platforms: GCP, DigitalOcean, Packet, and Heroku. Infrastructure tooling: Terraform, Packer, OnePassword, and bash. Data tooling: Apache Beam (Java SDK), Apache Druid, Apache Hive (prototype), BigQuery, Postgres, Redshift (briefly - we moved to BigQuery). Languages: Node (small cloud-functions in data pipeline orchestration), bash (infrastructural glue code, one-off data processing, prototyping), Go (adserving & prototyping the forecasting platform), Haskell (part of the ad-inventory forecasting platform). Cloud tooling: cloud-functions, message queues, VMs, K8s clusters, VPC, firewall, load-balancers, etc.",
+      "summary": "I productionalized the company's data platform and became the data pipeline owner. I implemented push-button deployment of the entire data pipeline while increasing overall availability, monitoring, and correctness. As for scale, when I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. This corresponded to ~50 petabytes (mostly CDN-fronted) of downloads per month, and the data pipeline processing approximately 120MM events (podcast client requests) per day. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting.",
       "highlights": [
-        "Productionalized the company's analytics pipeline: I rapidly prototyped migrating our Druid cluster from VMs to Kubernetes. Druid nodes have specific memory and CPU requirements which, while specifiable K8s config, led us to abandoning this approach. The K8s promise of efficient VM utilization was insufficiently important to warrant going down this path at this juncture. Instead I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. As part of this effort, I also ported a minor pantheon of microservices and one-off scripts hosted in diverse environments all into GCP and Terraform.",
-        "Rapidly prototyped Apache Hive as a possible tool for BI to use in interfacing with our Druid cluster. Primary motivation: Druid does not support joins, HiveQL via Calcite does. Queries were still too slow and we didn't want to spend time productionizing Hive. Instead, BigQuery met and exceeded expectations as a BI data platform.",
-        "Built BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery. Because this worked so well (it was built on excellent CLI tools such as pgdump and Google's BigQuery CLI) and we had bigger fish to fry, the script was actually never set to run as a cron job and was instead manually executed on business days. This powered all of BI reporting.",
-        "Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure."
+				"Established the company's Infrastructure-as-Code standard. After a process of prototyping other Infrastructure-as-Code solutions (e.g. Kubernetes), I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. This spanned my first few months at Megaphone.",
+				"Architected the expansion of the data platform to support 3 (up from 1) different download-counting methodologies. This work spanned ~1.5 months and was implemented by myself and another engineer. In this effort, I learned the Apache Dataflow Java SDK sufficiently to make significant updates to the existing Dataflow pipeline. The verification process involved loading the new pipeline's output into BigQuery to make extensive quality checks. The effort landed successfully in production early on 12/15/19, two weeks before the Jan 1 deadline.",
+				"Architected the migration of the pipeline's source-data-archiving responsibility from a cron-triggered Ruby script whose output was manually verified in email form by our SRE to a Stackdriver-monitored service consisting of serverless functions, queues, and cloud storage.",
+				"Architected and implemented the migration of a brittle Kubernetes-hosted Go service that enhanced incoming log data to Dataflow. The Go service had become brittle under increased load and had begun to crash resulting in daily data losses of 10% on average. The migration to Dataflow jobs orchestrated by message queues and cloud-functions ended this pattern of data loss.",
+        "Built the BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery and then checked correctness (checking just counts between Druid and BigQuery but column-MD5 checks for postgres data). I also prototyped moving this to Apache Airflow but the script worked too well to justify the move. This powered all of BI reporting.",
+        "Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure.",
+				"Frequent one-off efforts to support BI in the form of data-product generation, spelunking into platform anomalies, requests from finance, etc. This mostly took the form of shell scripting on high-CPU count VMs and loading the resulting output into BigQuery for analysis.",
+				"Rapid prototyping of tools and technologies to test their fit against our needs. These included Apache Hive and Kubernetes for our Druid cluster."
       ]
     },
     {
@@ -261,9 +265,11 @@
       "keywords": [
         "Microsoft Parallel Data Warehouse",
         "Azure Data Warehouse",
+				"BigQuery",
+				"Redshift",
         "Columnar data storage",
         "Star schema",
-        "ETL"
+        "ETL/ELT"
       ]
     },
     {
@@ -322,6 +328,12 @@
       "keywords": [
         "ProjectEuler"
       ]
-    }
+    },
+		{
+			"name": "Volunteering",
+			"keywords": [
+				"Reading to preschoolers"
+			]
+		}
   ]
 }
