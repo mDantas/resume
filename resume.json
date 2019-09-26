@@ -266,7 +266,7 @@
       ]
     },
     {
-      "name": "Testing",
+      "name": "Application Testing",
       "level": "Experienced",
       "keywords": [
         "Stubs",
@@ -283,11 +283,13 @@
       ]
     },
     {
-      "name": "Ops/Infrastructure",
+      "name": "Other Ops/Infrastructure",
       "level": "Some experience",
       "keywords": [
         "Docker",
-        "Bamboo"
+        "Bamboo",
+				"Kubernetes",
+				"Jenkins"
       ]
     },
     {
