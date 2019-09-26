@@ -3,8 +3,8 @@
     "name": "Matthew Dantas-McCutcheon",
     "label": "Software Engineer",
     "picture": "",
-    "email": "mateusdm88 'at' gmail 'dot' com",
-    "summary": "Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler.",
+    "email": "mateusdm88@gmail.com",
+    "summary": "Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading teams and tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler. I can just ",
     "profiles": [
       {
         "network": "Github",
@@ -15,9 +15,23 @@
   },
   "work": [
     {
+      "company": "Megaphone (formerly Panoply Media)",
+      "position": "Infrastructure Team Lead",
+      "startDate": "2018-03-01",
+      "endDate": "2019-05-24",
+      "summary": "I productionalized the company's data platform. When I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting. My contributions spanned the following hosting platforms: GCP, DigitalOcean, Packet, and Heroku. Infrastructure tooling: Terraform, Packer, OnePassword, and bash. Data tooling: Apache Beam (Java SDK), Apache Druid, Apache Hive (prototype), BigQuery, Postgres, Redshift (briefly - we moved to BigQuery). Languages: Node (small cloud-functions in data pipeline orchestration), bash (infrastructural glue code, one-off data processing, prototyping), Go (adserving & prototyping the forecasting platform), Haskell (part of the ad-inventory forecasting platform). Cloud tooling: cloud-functions, message queues, VMs, K8s clusters, VPC, firewall, load-balancers, etc.",
+      "highlights": [
+        "Productionalized the company's analytics pipeline: I rapidly prototyped migrating our Druid cluster from VMs to Kubernetes. Druid nodes have specific memory and CPU requirements which, while specifiable K8s config, led us to abandoning this approach. The K8s promise of efficient VM utilization was insufficiently important to warrant going down this path at this juncture. Instead I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. As part of this effort, I also ported a minor pantheon of microservices and one-off scripts hosted in diverse environments all into GCP and Terraform.",
+        "Rapidly prototyped Apache Hive as a possible tool for BI to use in interfacing with our Druid cluster. Primary motivation: Druid does not support joins, HiveQL via Calcite does. Queries were still too slow and we didn't want to spend time productionizing Hive. Instead, BigQuery met and exceeded expectations as a BI data platform.",
+        "Built BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery. Because this worked so well (it was built on excellent CLI tools such as pgdump and Google's BigQuery CLI) and we had bigger fish to fry, the script was actually never set to run as a cron job and was instead manually executed on business days. This powered all of BI reporting.",
+        "Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure."
+      ]
+    },
+    {
       "company": "Vistaprint",
       "position": "Software Engineer, Vistaprint Data Warehouse",
       "startDate": "2017-10-01",
+      "endDate": "2018-03-01",
       "summary": "As part of a two person team, I am getting Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution has been co-creating and now refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work is in Azure Data Warehouse. The data will be used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.",
       "highlights": [
         "Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).",
@@ -140,8 +154,62 @@
   ],
   "skills": [
     {
+      "name": "Google Cloud",
+      "level": "Experienced",
+      "keywords": [
+        "PubSub",
+        "CloudFunction",
+        "BigQuery",
+        "Compute (VM)",
+        "Cloud Scheduler",
+        "Dataflow (Apache Beam)",
+        "Load balancers",
+        "VPC",
+        "Storage",
+        "Stackdriver"
+      ]
+    },
+    {
+      "name": "Infrastructure as Code",
+      "level": "Experienced",
+      "keywords": [
+        "Terraform",
+        "Packer"
+      ]
+    },
+    {
+      "name": "Ops/Cloud",
+      "level": "Experienced",
+      "keywords": [
+        "Heroku",
+        "Logentries",
+        "NewRelic",
+        "Stackdriver",
+        "Pagerduty"
+      ]
+    },
+    {
+      "name": "CDN configuration",
+      "level": "Some Experience",
+      "keywords": [
+        "Origin shielding",
+        "Primary/backup",
+        "Highwinds/Stackpath (vendor)"
+			]
+    },
+    {
+      "name": "Druid Cluster Administration",
+      "level": "Experienced",
+      "keywords": [
+        "Scaling",
+        "Configuring",
+        "Monitoring",
+        "Debugging & Troubleshooting"
+      ]
+    },
+    {
       "name": "Web Development",
-			"level": "Experienced",
+      "level": "Experienced",
       "keywords": [
         "Express",
         "Node",
@@ -149,7 +217,6 @@
         "Rails",
         "Templating",
         "Creating and consuming web APIs",
-        "ORM",
         "il8n"
       ]
     },
@@ -177,15 +244,6 @@
         "git",
         "scrum master",
         "distributed teams"
-      ]
-    },
-    {
-      "name": "Ops/Cloud",
-      "level": "Experienced",
-      "keywords": [
-        "Heroku",
-        "Logentries",
-        "NewRelic"
       ]
     },
     {

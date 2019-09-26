@@ -525,7 +525,7 @@ ul.courses li:hover {
 
 .level .bar {
     border: 1px solid #ddd;
-    display: none; /* doesnt work well for me */
+    display: block;
     width: 10em;
     height: 5px;
     position: relative;
@@ -789,10 +789,6 @@ ul.courses li:hover {
     				<span class="fa fa-envelope-o"></span>
     				<a href="mailto:mateusdm88@gmail.com">mateusdm88@gmail.com</a>
     			</div>
-    			<div class="phone">
-    				<span class="fa fa-mobile"></span>
-    				<a href="tel:(202) 753-4966">(202) 753-4966</a>
-    			</div>
     		</div>
     
     		<div id="profiles">
@@ -809,7 +805,7 @@ ul.courses li:hover {
     
     	<section class="section main-summary">
     		<section>
-    			<div><p>Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler.</p></div>
+    			<div><p>Software engineer, problem-solving generalist. I have a track record of wearing whatever hats need wearing - engaging with customers and POs to make product decisions, scrum mastering to keep my team running smoothly, leading teams and tech efforts, and individually contributing. I find greatest satisfaction in having a large customer impact and finding elegant solutions to hard problems that draw on math and science. Most recently, I'm scratching the latter itch by learning Haskell while solving problems on ProjectEuler. I can just </p></div>
     		</section>
     	</section>
     
@@ -818,6 +814,90 @@ ul.courses li:hover {
     		<h2 class='section-title'>Skills</h2>
     	</header>
     	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Google Cloud
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>PubSub</li>
+    				<li>CloudFunction</li>
+    				<li>BigQuery</li>
+    				<li>Compute (VM)</li>
+    				<li>Cloud Scheduler</li>
+    				<li>Dataflow (Apache Beam)</li>
+    				<li>Load balancers</li>
+    				<li>VPC</li>
+    				<li>Storage</li>
+    				<li>Stackdriver</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Infrastructure as Code
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Terraform</li>
+    				<li>Packer</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Ops/Cloud
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Heroku</li>
+    				<li>Logentries</li>
+    				<li>NewRelic</li>
+    				<li>Stackdriver</li>
+    				<li>Pagerduty</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				CDN configuration
+    			</h3>
+    			 
+    			<div class="level some experience">
+    				<em>Some Experience</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Origin shielding</li>
+    				<li>Primary/backup</li>
+    				<li>Highwinds/Stackpath (vendor)</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Druid Cluster Administration
+    			</h3>
+    			 
+    			<div class="level experienced">
+    				<em>Experienced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Scaling</li>
+    				<li>Configuring</li>
+    				<li>Monitoring</li>
+    				<li>Debugging &amp; Troubleshooting</li>
+    			</ul>
+    		</div>
     		<div class="item">
     			<h3 class="name">
     				Web Development
@@ -834,7 +914,6 @@ ul.courses li:hover {
     				<li>Rails</li>
     				<li>Templating</li>
     				<li>Creating and consuming web APIs</li>
-    				<li>ORM</li>
     				<li>il8n</li>
     			</ul>
     		</div>
@@ -874,21 +953,6 @@ ul.courses li:hover {
     				<li>git</li>
     				<li>scrum master</li>
     				<li>distributed teams</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Ops/Cloud
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Heroku</li>
-    				<li>Logentries</li>
-    				<li>NewRelic</li>
     			</ul>
     		</div>
     		<div class="item">
@@ -970,7 +1034,7 @@ ul.courses li:hover {
     </section>
     <section class="section">
       <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
+        <h2 class='section-title'>Work Experience <span class="item-count">(8)</span></h2>
       </header>
     
       <section id="work">
@@ -980,11 +1044,37 @@ ul.courses li:hover {
             <label for="work-item-0"></label>
     
     			<header>
+    				<div class="position">Infrastructure Team Lead</div>
+    				<div class="company">Megaphone (formerly Panoply Media)</div>
+    				<div class="date">
+    				  <span class="startDate">March 2018</span> 
+    					<span class="endDate">- May 2019</span> 
+    				</div>
+    			</header>
+    			
+         	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>I productionalized the company's data platform. When I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting. My contributions spanned the following hosting platforms: GCP, DigitalOcean, Packet, and Heroku. Infrastructure tooling: Terraform, Packer, OnePassword, and bash. Data tooling: Apache Beam (Java SDK), Apache Druid, Apache Hive (prototype), BigQuery, Postgres, Redshift (briefly - we moved to BigQuery). Languages: Node (small cloud-functions in data pipeline orchestration), bash (infrastructural glue code, one-off data processing, prototyping), Go (adserving & prototyping the forecasting platform), Haskell (part of the ad-inventory forecasting platform). Cloud tooling: cloud-functions, message queues, VMs, K8s clusters, VPC, firewall, load-balancers, etc.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Productionalized the company's analytics pipeline: I rapidly prototyped migrating our Druid cluster from VMs to Kubernetes. Druid nodes have specific memory and CPU requirements which, while specifiable K8s config, led us to abandoning this approach. The K8s promise of efficient VM utilization was insufficiently important to warrant going down this path at this juncture. Instead I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. As part of this effort, I also ported a minor pantheon of microservices and one-off scripts hosted in diverse environments all into GCP and Terraform.</p></li>
+                <li><p>Rapidly prototyped Apache Hive as a possible tool for BI to use in interfacing with our Druid cluster. Primary motivation: Druid does not support joins, HiveQL via Calcite does. Queries were still too slow and we didn't want to spend time productionizing Hive. Instead, BigQuery met and exceeded expectations as a BI data platform.</p></li>
+                <li><p>Built BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery. Because this worked so well (it was built on excellent CLI tools such as pgdump and Google's BigQuery CLI) and we had bigger fish to fry, the script was actually never set to run as a cron job and was instead manually executed on business days. This powered all of BI reporting.</p></li>
+                <li><p>Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-1" type="checkbox" class="toggle-item" />
+            <label for="work-item-1"></label>
+    
+    			<header>
     				<div class="position">Software Engineer, Vistaprint Data Warehouse</div>
     				<div class="company">Vistaprint</div>
     				<div class="date">
     				  <span class="startDate">October 2017</span> 
-    					<span class="endDate">- Current</span>
+    					<span class="endDate">- March 2018</span> 
     				</div>
     			</header>
     			
@@ -1000,8 +1090,8 @@ ul.courses li:hover {
         </section>
         <section class="work-item">
     
-            <input id="work-item-1" type="checkbox" class="toggle-item" />
-            <label for="work-item-1"></label>
+            <input id="work-item-2" type="checkbox" class="toggle-item" />
+            <label for="work-item-2"></label>
     
     			<header>
     				<div class="position">Software Engineer, Local Listings product</div>
@@ -1031,8 +1121,8 @@ ul.courses li:hover {
         </section>
         <section class="work-item">
     
-            <input id="work-item-2" type="checkbox" class="toggle-item" />
-            <label for="work-item-2"></label>
+            <input id="work-item-3" type="checkbox" class="toggle-item" />
+            <label for="work-item-3"></label>
     
     			<header>
     				<div class="position">Software Engineer, Pagemodo product</div>
@@ -1058,8 +1148,8 @@ ul.courses li:hover {
         </section>
         <section class="work-item">
     
-            <input id="work-item-3" type="checkbox" class="toggle-item" />
-            <label for="work-item-3"></label>
+            <input id="work-item-4" type="checkbox" class="toggle-item" />
+            <label for="work-item-4"></label>
     
     			<header>
     				<div class="position">Rails developer - Max.gov</div>
@@ -1087,8 +1177,8 @@ ul.courses li:hover {
         </section>
         <section class="work-item">
     
-            <input id="work-item-4" type="checkbox" class="toggle-item" />
-            <label for="work-item-4"></label>
+            <input id="work-item-5" type="checkbox" class="toggle-item" />
+            <label for="work-item-5"></label>
     
     			<header>
     				<div class="position">Systems Engineer Asc</div>
@@ -1112,8 +1202,8 @@ ul.courses li:hover {
         </section>
         <section class="work-item">
     
-            <input id="work-item-5" type="checkbox" class="toggle-item" />
-            <label for="work-item-5"></label>
+            <input id="work-item-6" type="checkbox" class="toggle-item" />
+            <label for="work-item-6"></label>
     
     			<header>
     				<div class="position">Intern</div>
@@ -1137,8 +1227,8 @@ ul.courses li:hover {
         </section>
         <section class="work-item">
     
-            <input id="work-item-6" type="checkbox" class="toggle-item" />
-            <label for="work-item-6"></label>
+            <input id="work-item-7" type="checkbox" class="toggle-item" />
+            <label for="work-item-7"></label>
     
     			<header>
     				<div class="position">Undergraduate Researcher</div>
