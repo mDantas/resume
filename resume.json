@@ -167,7 +167,9 @@
         "Redshift",
         "Microsoft PDW",
 				"Columnar storage",
-				"Timeseries databases (Apache Druid)"
+				"Timeseries databases (Apache Druid)",
+				"Validation checks",
+				"Monitoring"
       ]
     },
     {
