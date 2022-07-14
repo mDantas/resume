@@ -4,7 +4,7 @@
     "label": "Software Engineer",
     "picture": "",
     "email": "mateusdm88@gmail.com",
-    "summary": "Software engineer, problem-solver, rapid learner, leader and individual contributor. I am interested in expanding on my experience handling and processing internet-scale traffic.",
+    "summary": "Software engineer, problem-solver, rapid learner, leader and individual contributor. I am interested in expanding on my experience handling and processing internet-scale traffic. I also like math and functional programming; I've recently married these interests in learning the proof-assistant language, Coq.",
     "profiles": [
       {
         "network": "Github",
@@ -14,6 +14,31 @@
     ]
   },
   "work": [
+    {
+      "company": "Career Break",
+      "startDate": "2021-05-01",
+      "endDate": "Present",
+      "summary": "I've taken time off to run my daughter's virtual schooling and spend more time with her. More recently I've started also doing some self-study. This has included: (a) starting to learn abstract algebra (following Paolo Aluffi's book, Algebra: Chapter 0), (b) solving ProjectEuler problems in Haskell, and (c) learning the proof assistant, Coq, via the Software Foundations series."
+    },
+    {
+      "company": "Truebill",
+      "position": "Data & Infrastructure Engineer",
+      "startDate": "2019-11-01",
+      "endDate": "2021-05-01",
+      "summary": "I made sundry infrastructure and data engineering contributions, chiefly around exporting/synchronizing trillions
+      of records from Postgres to columnar datawarehouses.",
+      "highlights": [
+        "Developed a solution to get the company's 2.5 trillion transactions batch-synchronized from Postgres (in AWS) to BigQuery.",
+        "Deep dived into Clickhouse to evaluate it's suitability as a replacement for BigQuery. The output of this investigation
+        included a proof-of-concept 3-node Clickhouse cluster following our transactions table in Postgres (streaming updates)."
+      ]
+    },
+    {
+      "company": "Career Break",
+      "startDate": "2019-05-24",
+      "endDate": "2019-11-01",
+      "summary": "I took some time off. I enjoyed time with family. I also volunteered at my daughter's pre-school where I did read-alouds twice a week."
+    },
     {
       "company": "Megaphone (formerly Panoply Media)",
       "position": "Infrastructure Team Lead",
@@ -169,7 +194,8 @@
 				"Columnar storage",
 				"Timeseries databases (Apache Druid)",
 				"Validation checks",
-				"Monitoring"
+				"Monitoring",
+                                "Clickhouse"
       ]
     },
     {
@@ -204,7 +230,10 @@
         "Logentries",
         "NewRelic",
         "Stackdriver",
-        "Pagerduty"
+        "Pagerduty",
+        "Packer",
+        "DigitalOcean",
+        "AWS"
       ]
     },
     {
@@ -271,15 +300,15 @@
       "keywords": [
         "Stubs",
         "Spies",
-        "Mocks",
-        "Mocha"
+        "Mocks"
       ]
     },
     {
       "name": "Functional Languages",
       "level": "Some experience",
       "keywords": [
-        "Haskell"
+        "Haskell",
+        "Coq"
       ]
     },
     {
@@ -331,7 +360,7 @@
     {
       "name": "Recreational Math",
       "keywords": [
-        "ProjectEuler"
+        "ProjectEuler (solved 72 problems using Haskell)"
       ]
     },
 		{
