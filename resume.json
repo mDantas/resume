@@ -1,25 +1,65 @@
 {
   "basics": {
     "name": "Matthew Dantas-McCutcheon",
-    "label": "Software Engineer",
-    "picture": "",
-    "summary": "Software engineer, problem-solver, rapid learner, leader and individual contributor. I am interested in expanding on my experience handling and processing internet-scale traffic. I also like math and functional programming; I've recently married these interests in learning the proof-assistant language, Coq.",
+    "picture": "https://1.gravatar.com/userimage/66529283/6cf6ae48f58243c0aa382d27e7913b86?size=1000",
+    "email": "mateusdm88@gmail.com",
+    "location": {
+      "address": "729 Richmond Ave",
+      "postalCode": "20910",
+      "city": "Silver Spring",
+      "countryCode": "US",
+      "region": "Maryland"
+    },
+    "label": "Experienced Software Engineer",
+    "summary": "I am an experienced software engineering individual contributor and leader. I have worked on all parts of the stack but have focused on backend, big data, and infrastructure engineering. I also like advanced mathematics and computer science. I am always seeking to deepen my expertise in both, either through my current position or continuing education.",
     "profiles": [
       {
         "network": "Github",
         "username": "mDantas",
         "url": "https://github.com/mDantas"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Matthew Dantas-McCutcheon",
+        "url": "https://www.linkedin.com/in/matthew-dantas-mccutcheon-64131544"
+      },
+      {
+        "network": "Project Euler",
+        "username": "mateusdm",
+        "url": "https://projecteuler.net/profile/mateusdm.png"
       }
     ]
   },
   "work": [
     {
-      "company": "Career Break",
-      "startDate": "2021-05-01",
-      "summary": "I've taken time off to run my daughter's virtual schooling and spend more time with her. More recently I've started also doing some self-study. This has included: (a) starting to learn abstract algebra (following Paolo Aluffi's book, Algebra: Chapter 0), (b) solving ProjectEuler problems in Haskell, and (c) learning the proof assistant, Coq, via the Software Foundations series."
+      "name": "Reside Health",
+      "position": "Software Engineer - Data, Infrastructure, and Ops",
+      "startDate": "2023-06-01",
+      "summary": "Handled the company's datawarehousing and infrastructure needs.",
+      "highlights": [
+        "Designed and implemented the company's datawarehouse and ELT architecture. (Fivetran and some custom batch synchs to Snowflake).",
+        "Stood up and maintained AWS infrastructure using Terraform Cloud.",
+        "Setup monitoring.",
+        "Implemented a staging version of the software platorm.",
+        "Contributed to the Rails API."
+      ]
     },
     {
-      "company": "Truebill",
+      "name": "Volunteering & Self-Study",
+      "position": "N/a",
+      "startDate": "2021-05-01",
+      "endDate": "2023-06-01",
+      "summary": "I took time off to be with my daughter, volunteer, and self study a number of topics in software engineering and advanced mathematics.",
+      "highlights": [
+        "Studied advanced, graduate-level mathematics (a year-long foundation in abstract algebra) at the University of Maryland, obtained a 4.0 GPA. This was despite not having taken the undergraduate introduction to the material as well as not having taken math courses in more than a decade.",
+        "Ran my daughter's virtual schooling, kindergarten through 1st grade.",
+        "When my daughter returned to in-person schooling, I volunteered weekly and at times daily in her classroom.",
+        "Solved recreational math problems from Project Euler in Haskell. Link to private git repo available upon request.",
+        "Studied the proof assistant, Coq, via the Software Foundations series. Link to private git repo available upon request."
+      ]
+    },
+    {
+      "name": "Truebill",
       "position": "Data & Infrastructure Engineer",
       "startDate": "2019-11-01",
       "endDate": "2021-05-01",
@@ -30,30 +70,24 @@
       ]
     },
     {
-      "company": "Career Break",
-      "startDate": "2019-05-24",
-      "endDate": "2019-11-01",
-      "summary": "I took some time off. I enjoyed time with family. I also volunteered at my daughter's pre-school where I did read-alouds twice a week."
-    },
-    {
-      "company": "Megaphone (formerly Panoply Media)",
+      "name": "Megaphone (acquired by Spotify)",
       "position": "Infrastructure Team Lead",
       "startDate": "2018-03-01",
       "endDate": "2019-05-24",
       "summary": "I productionalized the company's data platform and became the data pipeline owner. I implemented push-button deployment of the entire data pipeline while increasing overall availability, monitoring, and correctness. As for scale, when I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. This corresponded to ~50 petabytes (mostly CDN-fronted) of downloads per month, and the data pipeline processing approximately 120MM events (podcast client requests) per day. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting.",
       "highlights": [
-				"Established the company's Infrastructure-as-Code standard. After a process of prototyping other Infrastructure-as-Code solutions (e.g. Kubernetes), I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. This spanned my first few months at Megaphone.",
-				"Architected the expansion of the data platform to support 3 (up from 1) different download-counting methodologies. This work spanned ~1.5 months and was implemented by myself and another engineer. In this effort, I learned the Apache Dataflow Java SDK sufficiently to make significant updates to the existing Dataflow pipeline. The verification process involved loading the new pipeline's output into BigQuery to make extensive quality checks. The effort landed successfully in production early on 12/15/19, two weeks before the Jan 1 deadline.",
-				"Architected the migration of the pipeline's source-data-archiving responsibility from a cron-triggered Ruby script whose output was manually verified in email form by our SRE to a Stackdriver-monitored service consisting of serverless functions, queues, and cloud storage.",
-				"Architected and implemented the migration of a brittle Kubernetes-hosted Go service that enhanced incoming log data to Dataflow. The Go service had become brittle under increased load and had begun to crash resulting in daily data losses of 10% on average. The migration to Dataflow jobs orchestrated by message queues and cloud-functions ended this pattern of data loss.",
+        "Established the company's Infrastructure-as-Code standard. After a process of prototyping other Infrastructure-as-Code solutions (e.g. Kubernetes), I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. This spanned my first few months at Megaphone.",
+        "Architected the expansion of the data platform to support 3 (up from 1) different download-counting methodologies. This work spanned ~1.5 months and was implemented by myself and another engineer. In this effort, I learned the Apache Dataflow Java SDK sufficiently to make significant updates to the existing Dataflow pipeline. The verification process involved loading the new pipeline's output into BigQuery to make extensive quality checks. The effort landed successfully in production early on 12/15/19, two weeks before the Jan 1 deadline.",
+        "Architected the migration of the pipeline's source-data-archiving responsibility from a cron-triggered Ruby script whose output was manually verified in email form by our SRE to a Stackdriver-monitored service consisting of serverless functions, queues, and cloud storage.",
+        "Architected and implemented the migration of a brittle Kubernetes-hosted Go service that enhanced incoming log data to Dataflow. The Go service had become brittle under increased load and had begun to crash resulting in daily data losses of 10% on average. The migration to Dataflow jobs orchestrated by message queues and cloud-functions ended this pattern of data loss.",
         "Built the BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery and then checked correctness (checking just counts between Druid and BigQuery but column-MD5 checks for postgres data). I also prototyped moving this to Apache Airflow but the script worked too well to justify the move. This powered all of BI reporting.",
         "Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure.",
-				"Frequent one-off efforts to support BI in the form of data-product generation, spelunking into platform anomalies, requests from finance, etc. This mostly took the form of shell scripting on high-CPU count VMs and loading the resulting output into BigQuery for analysis.",
-				"Rapid prototyping of tools and technologies to test their fit against our needs. These included Apache Hive and Kubernetes for our Druid cluster."
+        "Frequent one-off efforts to support BI in the form of data-product generation, spelunking into platform anomalies, requests from finance, etc. This mostly took the form of shell scripting on high-CPU count VMs and loading the resulting output into BigQuery for analysis.",
+        "Rapid prototyping of tools and technologies to test their fit against our needs. These included Apache Hive and Kubernetes for our Druid cluster."
       ]
     },
     {
-      "company": "Vistaprint",
+      "name": "Vistaprint",
       "position": "Software Engineer, Vistaprint Data Warehouse",
       "startDate": "2017-10-01",
       "endDate": "2018-03-01",
@@ -64,7 +98,7 @@
       ]
     },
     {
-      "company": "Vistaprint",
+      "name": "Vistaprint",
       "position": "Software Engineer, Local Listings product",
       "website": "www.vistaprint.com/local-listings.aspx",
       "startDate": "2015-04-01",
@@ -81,7 +115,7 @@
       ]
     },
     {
-      "company": "Vistaprint",
+      "name": "Vistaprint",
       "position": "Software Engineer, Pagemodo product",
       "website": "http://www.pagemodo.com",
       "startDate": "2014-06-01",
@@ -94,7 +128,7 @@
       ]
     },
     {
-      "company": "Dell @ Executive Office of the President",
+      "name": "Dell @ Executive Office of the President",
       "position": "Rails developer - Max.gov",
       "website": "https://max.gov",
       "startDate": "2013-04-01",
@@ -109,7 +143,7 @@
       ]
     },
     {
-      "company": "Lockheed Martin",
+      "name": "Lockheed Martin",
       "position": "Systems Engineer Asc",
       "startDate": "2011-04-01",
       "endDate": "2014-06-01",
@@ -121,7 +155,7 @@
       ]
     },
     {
-      "company": "Booz Allen Hamilton",
+      "name": "Booz Allen Hamilton",
       "position": "Intern",
       "startDate": "2010-06-01",
       "endDate": "2010-08-01",
@@ -133,7 +167,7 @@
       ]
     },
     {
-      "company": "Institute for Physical Sciences and Technology",
+      "name": "Institute for Physical Sciences and Technology",
       "position": "Undergraduate Researcher",
       "startDate": "2006-06-01",
       "endDate": "2009-10-01",
@@ -175,6 +209,16 @@
         "Algorithms",
         "Systems Architecture"
       ]
+    },
+    {
+      "institution": "University of Maryland, College Park",
+      "area": "Graduate School",
+      "studyType": "Non-degree-seeking",
+      "startDate": "2022-08-29",
+      "gpa": "4.0",
+      "courses": [
+        "Abstract Algebra I & II"
+      ]
     }
   ],
   "skills": [
@@ -187,11 +231,13 @@
         "ETL/ELT",
         "Redshift",
         "Microsoft PDW",
-				"Columnar storage",
-				"Timeseries databases (Apache Druid)",
-				"Validation checks",
-				"Monitoring",
-                                "Clickhouse"
+        "Columnar storage",
+        "Timeseries databases (Apache Druid)",
+        "Validation checks",
+        "Monitoring",
+        "Clickhouse",
+        "Snowflake",
+        "Fivetran"
       ]
     },
     {
@@ -211,10 +257,27 @@
       ]
     },
     {
+      "name": "AWS",
+      "level": "Experienced",
+      "keywords": [
+        "EC2",
+        "Lambda",
+        "Redshift",
+        "Athena",
+        "RDS",
+        "IAM",
+        "VPA",
+        "S3",
+        "SNS",
+        "SQS"
+      ]
+    },
+    {
       "name": "Infrastructure as Code",
       "level": "Experienced",
       "keywords": [
         "Terraform",
+        "Terraform Cloud",
         "Packer"
       ]
     },
@@ -229,7 +292,8 @@
         "Pagerduty",
         "Packer",
         "DigitalOcean",
-        "AWS"
+        "AWS",
+        "Datadog"
       ]
     },
     {
@@ -239,7 +303,7 @@
         "Origin shielding",
         "Primary/backup",
         "Highwinds/Stackpath (vendor)"
-			]
+      ]
     },
     {
       "name": "Druid Cluster Administration",
@@ -313,8 +377,8 @@
       "keywords": [
         "Docker",
         "Bamboo",
-				"Kubernetes",
-				"Jenkins"
+        "Kubernetes",
+        "Jenkins"
       ]
     },
     {
@@ -335,6 +399,10 @@
     {
       "language": "French",
       "fluency": "Professional proficiency"
+    },
+    {
+      "language": "English",
+      "fluency": "Native fluency"
     }
   ],
   "interests": [
@@ -359,11 +427,12 @@
         "ProjectEuler (solved 72 problems using Haskell)"
       ]
     },
-		{
-			"name": "Volunteering",
-			"keywords": [
-				"Reading to preschoolers"
-			]
-		}
+    {
+      "name": "Volunteering",
+      "keywords": [
+        "Read-alouds",
+        "Tutoring"
+      ]
+    }
   ]
 }

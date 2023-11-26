@@ -1,1423 +1,1192 @@
-<!doctype html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Matthew Dantas-McCutcheon</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <style>
-  /********************************************
-* 	reset from
-* 	http://meyerweb.com/eric/tools/css/reset/
-*******************************************/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Matthew Dantas-McCutcheon</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/><style>@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?z1lat9');
+  src:  url('fonts/icomoon.eot?z1lat9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?z1lat9') format('truetype'),
+    url('fonts/icomoon.woff?z1lat9') format('woff'),
+    url('fonts/icomoon.svg?z1lat9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gitlab .path1:before {
+  content: "\e906";
+  color: rgb(252, 109, 38);
+}
+.icon-gitlab .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(226, 67, 41);
+}
+.icon-gitlab .path3:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(252, 109, 38);
+}
+.icon-gitlab .path4:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(252, 163, 38);
+}
+.icon-gitlab .path5:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(226, 67, 41);
+}
+.icon-gitlab .path6:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(252, 109, 38);
+}
+.icon-gitlab .path7:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(252, 163, 38);
+}
+.icon-gitlab .path8:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(226, 67, 41);
+}
+.icon-meetup .path1:before {
+  content: "\e901";
+  color: rgb(255, 255, 255);
+}
+.icon-meetup .path2:before {
+  content: "\e902";
+  margin-left: -1.5em;
+  color: rgb(240, 1, 1);
+}
+.icon-meetup .path3:before {
+  content: "\e903";
+  margin-left: -1.5em;
+  color: rgb(3, 3, 3);
+}
+.icon-blogger:before {
+  content: "\e900";
+}
+.icon-exercism:before {
+  content: "\e601";
+}
+.icon-telegram:before {
+  content: "\e904";
+}
+.icon-flickr:before {
+  content: "\f16e";
+}
+.icon-medium:before {
+  content: "\f23a";
+}
+.icon-heart:before {
+  content: "\f004";
+}
+.icon-book:before {
+  content: "\f02d";
+}
+.icon-linkedin:before {
+  content: "\f08c";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-link:before {
+  content: "\f0c1";
+}
+.icon-bars:before {
+  content: "\f0c9";
+}
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+.icon-googleplus:before {
+  content: "\f0d5";
+}
+.icon-circle:before {
+  content: "\f111";
+}
+.icon-code:before {
+  content: "\f121";
+}
+.icon-youtube:before {
+  content: "\f167";
+}
+.icon-stackoverflow:before {
+  content: "\f16c";
+}
+.icon-bitbucket:before {
+  content: "\f171";
+}
+.icon-tumblr:before {
+  content: "\f173";
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-skype:before {
+  content: "\f17e";
+}
+.icon-foursquare:before {
+  content: "\f180";
+}
+.icon-gittip:before {
+  content: "\f184";
+}
+.icon-gratipay:before {
+  content: "\f184";
+}
+.icon-stackexchange:before {
+  content: "\f18d";
+}
+.icon-vimeo:before {
+  content: "\f194";
+}
+.icon-graduation-cap:before {
+  content: "\f19d";
+}
+.icon-language:before {
+  content: "\f1ab";
+}
+.icon-child:before {
+  content: "\f1ae";
+}
+.icon-behance:before {
+  content: "\f1b5";
+}
+.icon-spotify:before {
+  content: "\f1bc";
+}
+.icon-soundcloud:before {
+  content: "\f1be";
+}
+.icon-codepen:before {
+  content: "\f1cb";
+}
+.icon-hackernews:before {
+  content: "\f1d4";
+}
+.icon-lastfm:before {
+  content: "\f202";
+}
+.icon-angellist:before {
+  content: "\f209";
+}
+.icon-facebook:before {
+  content: "\f230";
+}
+.icon-instagram:before {
+  content: "\e905";
+}
+.icon-trophy:before {
+  content: "\e605";
+}
+.icon-office:before {
+  content: "\e606";
+}
+.icon-clock:before {
+  content: "\e60a";
+}
+.icon-reddit:before {
+  content: "\e609";
+}
+.icon-profile:before {
+  content: "\e600";
+}
+.icon-tools:before {
+  content: "\e034";
+}
+.icon-location:before {
+  content: "\e602";
+}
+.icon-mail:before {
+  content: "\e603";
+}
+.icon-phone:before {
+  content: "\e03f";
+}
+.icon-newspaper:before {
+  content: "\e607";
+}
+.icon-chevron-down:before {
+  content: "\e60c";
+}
+.icon-chevron-up:before {
+  content: "\e60d";
+}
+.icon-dots-three-horizontal:before {
+  content: "\e60b";
+}
+.icon-thumbs-up:before {
+  content: "\e604";
+}
+.icon-board:before {
+  content: "\e608";
+}
+
+.relative {
+  position: relative;
+}
+.clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.space-right {
+  margin-right: 10px;
+}
+.space-bottom {
+  margin-bottom: 10px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.labels {
+  line-height: 2;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+  margin-right: 5px;
+}
+.label-keyword:last-child {
+  margin-right: 0;
+}
+.label-keyword p {
+  margin: 0;
+}
+.label-keyword a {
+  color: white;
+}
+.label-keyword a:hover {
+  text-decoration: none;
+}
+.link-disguise {
+  color: inherit;
+}
+.link-disguise:hover {
+  color: inherit;
+}
+.clear-margin {
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .clear-margin-sm {
+    margin-bottom: 0;
+  }
+}
+.fs-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.fs-2x {
+  font-size: 2em;
+}
+.fs-3x {
+  font-size: 3em;
+}
+.fs-4x {
+  font-size: 4em;
+}
+.btn-circle-sm {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0;
+  outline: none !important;
+}
+/* the version when the icon file is last updated */
+@font-face {
+  font-family: 'jst-elegant';
+  src: url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.eot?f218wo");
+  src: url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.eot?f218wo#iefix") format('embedded-opentype'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.ttf?f218wo") format('truetype'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.woff?f218wo") format('woff'), url("//unpkg.com/jsonresume-theme-elegant@1.12.0/assets/icomoon/fonts/icomoon.svg?f218wo#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'jst-elegant' !important;
+}
 body {
-    line-height: 1;
+  font-family: 'Lato';
+  background: #f0f0f0;
+  color: #333;
 }
-
-ol,
-ul {
-    list-style: none;
+.main {
+  padding: 5px;
 }
-
-blockquote,
-q {
-    quotes: none;
+.card {
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px 0;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: none;
+.card-nested {
+  min-height: 0;
+  border-width: 1px 0 0 0;
 }
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+.card-nested:before,
+.card-nested:after {
+  content: " ";
+  display: table;
 }
-
-
-/****************
-*	COMMONS
-****************/
-
-body,
-html {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 13px;
-    color: #40484f;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.46153846;
-    text-align: left;
-    -webkit-text-size-adjust: 100%;
+.card-nested:after {
+  clear: both;
 }
-
-p {
-    display: block;
-    margin-bottom: 1.3em;
+@media (max-width: 480px) {
+  .card-nested {
+    padding: 5px 0;
+  }
 }
-
-a {
-    color: #0095ff;
-    text-decoration: none;
+.background-card {
+  padding: 10px 20px;
 }
-
-a:hover {
-    color: #0c65a5;
-    text-decoration: underline;
+.card-wrapper {
+  padding: 5px;
 }
-
-ul {
-    margin-top: 1rem;
+@media (max-width: 992px) {
+  .card-wrapper {
+    float: none !important;
+  }
 }
-
-li {
-    list-style-type: square;
-    list-style-position: outside;
-    margin-left: 1.3em;
+.background-details .detail {
+  display: table;
 }
-
-.highlights>li>p {
-    margin-bottom: 0.5em;
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
 }
-
-h1 {
-    font-size: 2rem;
+.background-details .detail .info {
+  width: 100%;
 }
-
-h2 {
-    font-size: 1.67rem;
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
 }
-
-h3 {
-    font-size: 1.27rem;
+.background-details .detail .mobile-title {
+  display: none;
 }
-
-em {
-    color: #757575;
-}
-
-blockquote {
-    margin-bottom: 1em;
-}
-
-strong {
-    font-weight: 700;
-}
-
-
-/* main container */
-
-#resume {
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-
-/* every section wrapper */
-
-.section {
-    margin-bottom: 1rem;
-}
-
-section .location {
-    margin-right: .5em;
-    color: #606d76;
-    font-weight: 700;
-}
-
-#contact {
-    margin-top: .5rem;
-}
-
-#profiles .item {
-    padding: 0;
-}
-
-#header>#profiles,
-#header>#contact,
-#skills,
-#languages,
-#interests {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-}
-
-#header>div {
-    line-height: 1.5;
-}
-
-#header>div>div {
-    margin-right: 1.2em;
-}
-
-#header h1.name {
-    font-size: 2.8rem;
-    font-weight: 100;
-    line-height: 100%;
-}
-
-#header h2.label {
-    color: #202931;
-    font-size: 1.47rem;
-    font-weight: 300;
-}
-
-#header .picture {
-    width: 11em;
-    float: right;
-    border-radius: 4px;
-}
-
-.main-summary {
-    background: #f1f8ff;
-    padding: 1.2em 1em;
-    margin-top: 1rem;
-}
-
-.main-summary p {
-    margin: .15em 0 0;
-}
-
-h2.section-title {
+@media (max-width: 480px) {
+  .background-details .detail .mobile-title {
     display: inline-block;
-    background: #fff;
-    padding: 0 1em 0.3em 0;
-    color: #ff6d1f;
+    margin-left: 5px;
+    font-weight: bold;
     text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    font-size: .9rem;
+    vertical-align: middle;
+  }
 }
-
-.section>header {
-    position: relative;
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
 }
-
-.fa {
-    margin-right: 0.25em;
+@media (max-width: 480px) {
+  .background-details .detail {
+    display: block;
+  }
+  .background-details .detail .icon {
+    max-width: inherit;
+    min-width: inherit;
+    text-align: left;
+  }
+  .background-details .detail .icon,
+  .background-details .detail .info {
+    display: block;
+    padding: 10px 0;
+  }
+  .background-details .detail .title {
+    display: none;
+  }
 }
-
-.section>header::after {
-    position: absolute;
-    left: 0;
-    top: .7em;
-    height: 1px;
-    background: #ccc;
-    content: "";
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+@media (max-width: 992px) {
+  .info .content.has-sidebar {
     width: 100%;
-    z-index: -100;
-    display: block;
+    border-right: 0;
+  }
 }
-
-.section.main-summary>section {
-    margin: 0;
+@media (max-width: 480px) {
+  .info .content.has-sidebar {
+    padding: 0 2px;
+  }
 }
-
-.section>section>header {
-    font-size: 1.38rem;
-    position: relative;
-    margin-top: .7em;
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
 }
-
-.section>section>header:first-of-type {
-    margin: 0;
+@media (max-width: 480px) {
+  ul {
+    padding-left: 25px;
+  }
 }
-
-.section>section>header .space-left {
-    position: absolute;
-    left: -1.56rem;
-    top: 5px;
-    color: #aaa;
-    line-height: 1;
-    opacity: 0;
+.current-event {
+  font-size: 8px;
+  color: #5ACE24;
+  position: absolute;
+  right: 100%;
+  top: 4px;
+  left: -10px;
 }
-
-.position,
-.company,
-.organization,
-.institution,
-.date,
-.area,
-.studyType,
-.title,
-.awarder {
-    display: inline;
+.mop-wrapper > p:last-child {
+  margin: 0;
 }
-
-.position,
-.studyType,
-.area,
-.title,
-.language,
-.name {
-    font-weight: 600;
+/*
+    Credits: http://codyhouse.co/demo/smart-fixed-navigation/index.html
+*/
+.floating-nav-trigger {
+  width: 50px;
+  height: 50px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  font-size: 1.5em;
+  color: #357ebd;
+  z-index: 100;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: none !important;
 }
-
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-    content: "at "
+.floating-nav-trigger > [class^="icon-"],
+.floating-nav-trigger [class*=" icon-"],
+.floating-nav-trigger > .close-icon {
+  line-height: 50px;
 }
-
-.company,
-.institution,
-.organization,
-.awarder {
-    color: #606d76;
-    font-weight: 400;
+.floating-nav-trigger .close-icon {
+  display: none;
 }
-
-.section header .date {
-    font-size: 1rem;
-    display: inline-table;
-    padding: .1em 0;
-    font-weight: 600;
+.floating-nav-trigger:hover {
+  color: #1f496e;
+  background-color: #e6e6e6;
 }
-
-ul.keywords,
-ul.courses {
-    margin-top: .5em;
+.floating-nav-trigger.is-open {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
-
-ul.keywords li,
-ul.courses li {
-    display: inline-block;
-    margin: 2px 2px 2px 0;
-    padding: 4px 5px 5px;
-    font-size: .9rem;
-    line-height: 1;
-    text-transform: lowercase;
-    color: #3e6d8e;
-    background-color: #dfeaf1;
-    border: 0 solid #dfeaf1;
-    white-space: nowrap;
+.floating-nav-trigger.is-open .close-icon {
+  display: inherit;
 }
-
-ul.keywords li:hover,
-ul.courses li:hover {
-    background: #dfeaf0;
+.floating-nav-trigger.is-open .icon-bars {
+  display: none;
 }
-
-.item {
-    padding: .5em 0;
+.floating-nav-trigger.is-open:hover {
+  background-color: white;
 }
-
-.gpa {
-    padding-bottom: .5em;
-}
-
-.fa.social {
-    font-size: 1.1em;
-}
-
-
-/* Social Media Brand Colors */
-
-.google-plus {
-    color: #dd4b39;
-}
-
-.tumblr {
-    color: #32506d;
-}
-
-.foursquare {
-    color: #0072b1;
-}
-
-.facebook {
-    color: #3b5998;
-}
-
-.linkedin {
-    color: #007bb6;
-}
-
-.pinterest {
-    color: #cb2027;
-}
-
-.dribbble {
-    color: #ea4c89;
-}
-
-.instagram {
-    color: #517fa4;
-}
-
-.twitter {
-    color: #00aced;
-}
-
-.soundcloud {
-    color: #ff3a00;
-}
-
-.wordpress {
-    color: #21759b;
-}
-
-.youtube {
-    color: #bb0000;
-}
-
-.github {
-    color: #171515;
-}
-
-.stack-overflow {
-    color: #828386;
-    position: relative;
-}
-
-.flickr {
-    color: #ff0084;
-}
-
-.stack-overflow::after {
-    position: absolute;
-    left: 0;
-    content: '\f16c';
-    color: #f68a1f;
-    overflow: hidden;
-    height: 100%;
-}
-
-.telegram {
-    color: #2291c3;
-}
-
-#languages .item,
-#skills .item,
-#interests .item {
-    width: 15em;
-    padding: 0 .5em .5em 0;
-    border-bottom: none;
-}
-
-#skills .item {
-    width: 16em;
-}
-
-#skills .item .keywords {
-    width: 15em;
-}
-
-
-/* Skill chart */
-
-.level {
-    margin-bottom: .5em;
-}
-
-.level .bar {
-    border: 1px solid #ddd;
-    display: block;
-    width: 10em;
-    height: 5px;
-    position: relative;
-}
-
-.level .bar::after {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    background: black;
-    height: 5px;
-}
-
-.level.beginner .bar::after {
-    background: #EB5F51;
-    width: 2.5em;
-}
-
-.level.intermediate .bar::after {
-    background: #ffdf1f;
-    width: 5em;
-}
-
-.level.advanced .bar::after,
-.level.fluent .bar::after {
-    background: #5CB85C;
-    width: 7.5em;
-}
-
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-    background: #59C596;
-    width: 10em;
-}
-
-#references .item {
-    padding-left: .5em;
-    border-left: 5px solid #ff6d1f;
-}
-
-.toggle-item {
+.floating-nav {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transition: transform 0.3s, visibility 0s 0.3s;
+  -o-transition: transform 0.3s, visibility 0s 0.3s;
+  transition: transform 0.3s, visibility 0s 0.3s;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+  position: fixed;
+  z-index: 50;
+  right: 10px;
+  bottom: 10px;
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
   visibility: hidden;
+  overflow: hidden;
 }
-
-/******************
-*	HELPER CLASSES
-******************/
-
-.clear::after {
-    content: "";
-    display: table;
-    clear: both;
+.floating-nav ul {
+  font-size: 1.2em;
+  margin: 0;
 }
-
-.display {
-    display: block;
-    opacity: 1 !important;
+.floating-nav ul li {
+  border-bottom: 1px solid #eff2f6;
 }
-
-.margin1 {
-    margin-bottom: .5rem;
+.floating-nav ul li a {
+  padding: 20px;
+  text-decoration: none;
+  color: #357ebd;
+  display: block;
 }
-
-
-/****************
-*		TABLET
-****************/
-
-@media screen and (min-width: 602px) {
-    #resume {
-        width: 80%;
-        margin: 0 auto;
-    }
+.floating-nav ul li a:hover {
+  color: #1f496e;
 }
-
-
-/****************
-*		LAPTOP
-****************/
-
-@media screen and (min-width: 1025px) {
-    li {
-        margin-left: 1.5em;
-    }
-    #resume {
-        width: 820px;
-        margin: 2rem auto;      
-    }
-    .section>section>header .space-left {
-        opacity: 1;
-        cursor: pointer;
-    }
-    .section>section {
-        margin-left: 1.67rem;
-    }
-    .toggle-item {
-        transform: translate(-9999px);
-    }
-    .toggle-item+label {
-        display: block;
-        margin-top: -16px;
-    }
-    .toggle-item:checked+label:after {
-        content: '\f0d7';
-    }
-    .toggle-item+label:after {
-        float: left;
-        cursor: pointer;
-        margin-left: -20px;
-        color: #aaa;
-        font-size: 16px;
-        content: '\f0da';
-        font-family: Fontawesome;
-    }
-    .toggle-item~.item {
-        height: 0;
-        opacity: 0;
-    }
-    .toggle-item:checked~.item {
-        height: auto;
-        opacity: 1;
-        transition: all .5s linear;
-    }
-    .company::before,
-    .institution::before,
-    .organization::before,
-    .awarder::before {
-        content: "| ";
-    }
-    .header-left {
-        float: left;
-        width: 70%;
-        word-break: normal;
-    }
-    .section header .date {
-        float: right;
-        padding: .2em;
-    }
-    .display {
-        display: none;
-    }
-    .display:not(.none) {
-        display: block;
-    }
+.floating-nav ul li:last-child {
+  border-bottom: 0;
 }
-
+.floating-nav.is-visible {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.3s, visibility 0s 0s;
+  -o-transition: transform 0.3s, visibility 0s 0s;
+  transition: transform 0.3s, visibility 0s 0s;
+  visibility: visible;
+}
+@media (max-width: 992px) {
+  .profile-card-wrapper {
+    position: relative;
+  }
+}
+.profile-card-wrapper .profile-card {
+  padding: 10px;
+}
+.profile-pic {
+  padding: 20px 0;
+}
+@media (max-width: 992px) {
+  .profile-pic {
+    padding: 10px 0;
+  }
+}
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 992px) {
+  .name {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-details {
+    text-align: center;
+  }
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+@media (max-width: 992px) {
+  .contact-details .detail .icon {
+    padding: 0 5px 0 0;
+  }
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .contact-details .detail {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .contact-details .detail {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 10px;
+  }
+  .contact-details .detail .icon,
+  .contact-details .detail .info {
+    display: inline-block;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .contact-details .detail {
+    float: left;
+    width: 25%;
+  }
+}
+.social-links {
+  line-height: 2.5;
+}
+.social-link {
+  margin-left: 5px;
+  min-width: 35px;
+  display: inline-block;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover,
+.link-github:focus {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #33ccff;
+}
+.link-twitter:hover,
+.link-twitter:focus {
+  text-decoration: none;
+  color: #00bfff;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover,
+.link-blog:focus {
+  text-decoration: none;
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover,
+.link-linkedin:focus {
+  text-decoration: none;
+  color: #005983;
+}
+.link-skype {
+  color: #12A5F4;
+}
+.link-skype:hover,
+.link-skype:focus {
+  text-decoration: none;
+  color: #0986ca;
+}
+.link-instagram {
+  color: #e4405f;
+}
+.link-instagram:hover,
+.link-instagram:focus {
+  text-decoration: none;
+  color: #d31e40;
+}
+.link-stackoverflow {
+  color: #8e8e92;
+}
+.link-stackoverflow:hover,
+.link-stackoverflow:focus {
+  text-decoration: none;
+  color: #747479;
+}
+.link-stackexchange {
+  color: #62b0df;
+}
+.link-stackexchange:hover,
+.link-stackexchange:focus {
+  text-decoration: none;
+  color: #389bd6;
+}
+.link-lastfm {
+  color: #d12127;
+}
+.link-lastfm:hover,
+.link-lastfm:focus {
+  text-decoration: none;
+  color: #a51a1f;
+}
+.link-soundcloud {
+  color: #e8822d;
+}
+.link-soundcloud:hover,
+.link-soundcloud:focus {
+  text-decoration: none;
+  color: #cc6916;
+}
+.link-googleplus {
+  color: #dd4b39;
+}
+.link-googleplus:hover,
+.link-googleplus:focus {
+  text-decoration: none;
+  color: #c23321;
+}
+.link-youtube {
+  color: #dd4b39;
+}
+.link-youtube:hover,
+.link-youtube:focus {
+  text-decoration: none;
+  color: #c23321;
+}
+.link-pinterest {
+  color: #bd091f;
+}
+.link-pinterest:hover,
+.link-pinterest:focus {
+  text-decoration: none;
+  color: #8c0717;
+}
+.link-gratipay {
+  color: #630;
+}
+.link-gratipay:hover,
+.link-gratipay:focus {
+  text-decoration: none;
+  color: #331a00;
+}
+.link-vimeo {
+  color: #17b3e8;
+}
+.link-vimeo:hover,
+.link-vimeo:focus {
+  text-decoration: none;
+  color: #128fba;
+}
+.link-behance {
+  color: #2c98cf;
+}
+.link-behance:hover,
+.link-behance:focus {
+  text-decoration: none;
+  color: #2379a5;
+}
+.link-codepen {
+  color: #1c1c1c;
+}
+.link-codepen:hover,
+.link-codepen:focus {
+  text-decoration: none;
+  color: #020202;
+}
+.link-foursquare {
+  color: #fa4778;
+}
+.link-foursquare:hover,
+.link-foursquare:focus {
+  text-decoration: none;
+  color: #f91554;
+}
+.link-reddit {
+  color: #545454;
+}
+.link-reddit:hover,
+.link-reddit:focus {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+.link-spotify {
+  color: #acd200;
+}
+.link-spotify:hover,
+.link-spotify:focus {
+  text-decoration: none;
+  color: #829f00;
+}
+.link-tumblr {
+  color: #2d4661;
+}
+.link-tumblr:hover,
+.link-tumblr:focus {
+  text-decoration: none;
+  color: #1d2d3e;
+}
+.link-dribbble {
+  color: #ce366f;
+}
+.link-dribbble:hover,
+.link-dribbble:focus {
+  text-decoration: none;
+  color: #a82959;
+}
+.link-facebook {
+  color: #4b6daa;
+}
+.link-facebook:hover,
+.link-facebook:focus {
+  text-decoration: none;
+  color: #3b5687;
+}
+.link-angellist {
+  color: black;
+}
+.link-angellist:hover,
+.link-angellist:focus {
+  text-decoration: none;
+  color: #000000;
+}
+.link-bitbucket {
+  color: #205081;
+}
+.link-bitbucket:hover,
+.link-bitbucket:focus {
+  text-decoration: none;
+  color: #163758;
+}
+.link-hackernews {
+  color: #ff6600;
+}
+.link-hackernews:hover,
+.link-hackernews:focus {
+  text-decoration: none;
+  color: #cc5200;
+}
+.link-exercism {
+  color: #d81d4e;
+}
+.link-exercism:hover,
+.link-exercism:focus {
+  text-decoration: none;
+  color: #ab173e;
+}
+.link-blogger {
+  color: #FF9234;
+}
+.link-blogger:hover,
+.link-blogger:focus {
+  text-decoration: none;
+  color: #ff7701;
+}
+.link-medium {
+  color: #00AB6C;
+}
+.link-medium:hover,
+.link-medium:focus {
+  text-decoration: none;
+  color: #00784c;
+}
+.link-flickr {
+  color: black;
+}
+.link-flickr:hover,
+.link-flickr:focus {
+  text-decoration: none;
+  color: #000000;
+}
+.link-telegram {
+  color: #3BABDD;
+}
+.link-telegram:hover,
+.link-telegram:focus {
+  text-decoration: none;
+  color: #2291c3;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 15px;
+}
+@media (max-width: 480px) {
+  .skill-info {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .quote {
+    font-size: inherit;
+  }
+}
+.icon-meetup .path2:before {
+  margin-left: 0;
+}
 @media print {
-    #resume {
-        margin: 0;
-        padding: 0;
-        -ms-word-wrap: break-word;
-        word-wrap: break-word;
-        line-height: 1.3;
-        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
-    }
-    @page {
-        margin: 1cm 1.4cm;
-    }
-    .item-count {
-        display: none;
-    }
-    .company::before,
-    .institution::before,
-    .organization::before,
-    .awarder::before {
-        content: "at ";
-    }
-    .main-summary {
-        padding: 2rem 0;
-    }
-    .section {
-        margin: .8rem 0;
-        padding: 0;
-    }
-    .section header {
-        padding-bottom: .15rem;
-    }
-    .section .location {
-        padding-bottom: .15rem;
-    }
-    .stack-overflow::after {
-        content: "";
-    }
-    .fa.social {
-        color: #828386;
-    }
-    ul {
-        margin-top: .4em;
-    }
-    ul,
-    li {
-        padding: 0;
-    }
-    ul.keywords li,
-    ul.courses li {
-        margin: 0;
-        padding: 0;
-        font-size: .8rem;
-        text-transform: lowercase;
-    }
-    ul.keywords li::after,
-    ul.courses li::after {
-        padding: 0 0 0 .1rem;
-        content: " |";
-    }
-    ul.keywords::before,
-    ul.courses::before {
-        font-size: .8rem;
-        font-weight: 600;
-    }
-    ul.keywords::before {
-        content: "Skills acquired: ";
-    }
-    #skills .keywords::before {
-        content: '';
-    }
-    .section p {
-        margin: 0;
-        padding: 0;
-    }
-    ul.courses::before {
-        content: "Major courses: ";
-    }
-    ul.keywords li:last-of-type::after,
-    ul.courses li:last-of-type::after {
-        content: "";
-    }
-    .level em {
-        font-style: normal;
-        padding: .1em 0;
-    }
-    .level .bar {
-        display: none;
-    }
-    #profiles .item {
-        padding: 0;
-    }
-    .item.display {
-        display: block;
-        opacity: 1 !important;
-    }
+  a[href]:after {
+    content: none !important;
+  }
+  .profile-card {
+    text-align: center;
+  }
+  .profile-pic {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .profile-pic img {
+    border-radius: 0;
+  }
+  .name-and-profession {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+  }
+  .contact-details .detail {
+    position: relative;
+    float: left;
+    width: 25%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0;
+  }
+  .floating-nav,
+  .floating-nav-trigger {
+    display: none;
+  }
+  .pagebreak {
+    page-break-before: always;
+  }
 }
+</style></head><body itemscope="itemscope" itemtype="http://schema.org/Person"><div class="container-fluid"><div class="row main clearfix"><a class="js-floating-nav-trigger floating-nav-trigger" href="#"><i class="icon-bars"></i><span class="close-icon">&times;</span></a><nav class="floating-nav js-floating-nav"><ul class="list-unstyled"><li><a href="#about"><i class="mr-10 icon-board"></i>About</a></li><li><a href="#work-experience"><i class="mr-10 icon-office"></i>Work Experience</a></li><li><a href="#skills"><i class="mr-10 icon-tools"></i>Skills</a></li><li><a href="#education"><i class="mr-10 icon-graduation-cap"></i>Education</a></li><li><a href="#interests"><i class="mr-10 icon-heart"></i>Interests</a></li></ul></nav><section class="col-md-3 card-wrapper profile-card-wrapper affix"><div class="card profile-card"><span class="profile-pic-container"><div class="profile-pic"><img class="media-object img-circle center-block" data-src="holder.js/100x100" alt="Matthew Dantas-McCutcheon" src="https://1.gravatar.com/userimage/66529283/6cf6ae48f58243c0aa382d27e7913b86?size=1000" itemprop="image"/></div><div class="name-and-profession text-center"><h3 itemprop="name"><b>Matthew Dantas-McCutcheon</b></h3><h5 class="text-muted" itemprop="jobTitle">Experienced Software Engineer</h5></div></span><hr/><div class="contact-details clearfix"><div class="detail"><span class="icon"><i class="icon fs-lg icon-location"></i></span><span class="info">729 Richmond Ave, Silver Spring, Maryland, US, 20910</span></div><div class="detail"><span class="icon"><i class="icon fs-lg icon-mail"></i></span><span class="info"><a class="link-disguise" href="mailto:mateusdm88@gmail.com" itemprop="email">mateusdm88@gmail.com</a></span></div><div class="detail"><span class="icon" title="Languages I speak"><i class="icon fs-lg icon-language"></i></span><span class="info">Portuguese, French, English</span></div></div><hr/><div class="social-links text-center"><div><a class="fs-2x social-link link-github icon-github" href="https://github.com/mDantas" target="_blank" data-toggle="tooltip" title="Matthew Dantas-McCutcheon on Github"></a><a class="fs-2x social-link link-linkedin icon-linkedin" href="https://www.linkedin.com/in/matthew-dantas-mccutcheon-64131544" target="_blank" data-toggle="tooltip" title="Matthew Dantas-McCutcheon on LinkedIn"></a><a class="fs-2x social-link link-project euler icon-project euler" href="https://projecteuler.net/profile/mateusdm.png" target="_blank" data-toggle="tooltip" title="Matthew Dantas-McCutcheon on Project Euler"></a></div></div></div></section><section class="col-md-9 card-wrapper pull-right"><div class="card background-card"><h4 class="text-uppercase">Background</h4><hr/><div class="background-details"><div class="detail" id="about"><div class="icon"><i class="fs-lg icon-board"></i><span class="mobile-title">About</span></div><div class="info"><h4 class="title text-uppercase">About</h4><div class="card card-nested"><div class="content mop-wrapper" itemprop="description"><p>I am an experienced software engineering individual contributor and leader. I have worked on all parts of the stack but have focused on backend, big data, and infrastructure engineering. I also like advanced mathematics and computer science. I am always seeking to deepen my expertise in both, either through my current position or continuing education.</p>
+</div></div></div></div><div class="detail" id="work-experience"><div class="icon"><i class="fs-lg icon-office"></i><span class="mobile-title">Work Experience</span></div><div class="info"><h4 class="title text-uppercase">Work Experience</h4><ul class="list-unstyled clear-margin"><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><i class="icon-circle current-event" rel="tooltip" title="Currently Working" data-placement="left"></i><strong>Software Engineer - Data, Infrastructure, and Ops</strong>,&nbsp;Reside Health</p><p class="text-muted"><small><span class="space-right">Jun, 2023 - Present</span></small></p><div class="mop-wrapper space-bottom"><p>Handled the company's datawarehousing and infrastructure needs.</p>
+</div><ul><li class="mop-wrapper"><p>Designed and implemented the company's datawarehouse and ELT architecture. (Fivetran and some custom batch synchs to Snowflake).</p>
+</li><li class="mop-wrapper"><p>Stood up and maintained AWS infrastructure using Terraform Cloud.</p>
+</li><li class="mop-wrapper"><p>Setup monitoring.</p>
+</li><li class="mop-wrapper"><p>Implemented a staging version of the software platorm.</p>
+</li><li class="mop-wrapper"><p>Contributed to the Rails API.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>N/a</strong>,&nbsp;Volunteering &amp; Self-Study</p><p class="text-muted"><small><span class="space-right">May, 2021 - Jun, 2023</span><span><i class="icon-clock mr-5"></i>2 years 1 month</span></small></p><div class="mop-wrapper space-bottom"><p>I took time off to be with my daughter, volunteer, and self study a number of topics in software engineering and advanced mathematics.</p>
+</div><ul><li class="mop-wrapper"><p>Studied advanced, graduate-level mathematics (a year-long foundation in abstract algebra) at the University of Maryland, obtained a 4.0 GPA. This was despite not having taken the undergraduate introduction to the material as well as not having taken math courses in more than a decade.</p>
+</li><li class="mop-wrapper"><p>Ran my daughter's virtual schooling, kindergarten through 1st grade.</p>
+</li><li class="mop-wrapper"><p>When my daughter returned to in-person schooling, I volunteered weekly and at times daily in her classroom.</p>
+</li><li class="mop-wrapper"><p>Solved recreational math problems from Project Euler in Haskell. Link to private git repo available upon request.</p>
+</li><li class="mop-wrapper"><p>Studied the proof assistant, Coq, via the Software Foundations series. Link to private git repo available upon request.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Data &amp; Infrastructure Engineer</strong>,&nbsp;Truebill</p><p class="text-muted"><small><span class="space-right">Nov, 2019 - May, 2021</span><span><i class="icon-clock mr-5"></i>1 year 6 months</span></small></p><div class="mop-wrapper space-bottom"><p>I made sundry infrastructure and data engineering contributions, chiefly around exporting/synchronizing trillions of records from Postgres to columnar datawarehouses.</p>
+</div><ul><li class="mop-wrapper"><p>Developed a solution to get the company's 2.5 trillion transactions batch-synchronized from Postgres (in AWS) to BigQuery.</p>
+</li><li class="mop-wrapper"><p>Investigated Clickhouse to determine its suitability as a replacement for our use of BigQuery. The output of this investigation included a proof-of-concept 3-node Clickhouse cluster following our transactions table in Postgres (streaming updates).</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Infrastructure Team Lead</strong>,&nbsp;Megaphone (acquired by Spotify)</p><p class="text-muted"><small><span class="space-right">Mar, 2018 - May, 2019</span><span><i class="icon-clock mr-5"></i>1 year 2 months</span></small></p><div class="mop-wrapper space-bottom"><p>I productionalized the company's data platform and became the data pipeline owner. I implemented push-button deployment of the entire data pipeline while increasing overall availability, monitoring, and correctness. As for scale, when I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. This corresponded to ~50 petabytes (mostly CDN-fronted) of downloads per month, and the data pipeline processing approximately 120MM events (podcast client requests) per day. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting.</p>
+</div><ul><li class="mop-wrapper"><p>Established the company's Infrastructure-as-Code standard. After a process of prototyping other Infrastructure-as-Code solutions (e.g. Kubernetes), I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. This spanned my first few months at Megaphone.</p>
+</li><li class="mop-wrapper"><p>Architected the expansion of the data platform to support 3 (up from 1) different download-counting methodologies. This work spanned ~1.5 months and was implemented by myself and another engineer. In this effort, I learned the Apache Dataflow Java SDK sufficiently to make significant updates to the existing Dataflow pipeline. The verification process involved loading the new pipeline's output into BigQuery to make extensive quality checks. The effort landed successfully in production early on 12/15/19, two weeks before the Jan 1 deadline.</p>
+</li><li class="mop-wrapper"><p>Architected the migration of the pipeline's source-data-archiving responsibility from a cron-triggered Ruby script whose output was manually verified in email form by our SRE to a Stackdriver-monitored service consisting of serverless functions, queues, and cloud storage.</p>
+</li><li class="mop-wrapper"><p>Architected and implemented the migration of a brittle Kubernetes-hosted Go service that enhanced incoming log data to Dataflow. The Go service had become brittle under increased load and had begun to crash resulting in daily data losses of 10% on average. The migration to Dataflow jobs orchestrated by message queues and cloud-functions ended this pattern of data loss.</p>
+</li><li class="mop-wrapper"><p>Built the BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery and then checked correctness (checking just counts between Druid and BigQuery but column-MD5 checks for postgres data). I also prototyped moving this to Apache Airflow but the script worked too well to justify the move. This powered all of BI reporting.</p>
+</li><li class="mop-wrapper"><p>Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure.</p>
+</li><li class="mop-wrapper"><p>Frequent one-off efforts to support BI in the form of data-product generation, spelunking into platform anomalies, requests from finance, etc. This mostly took the form of shell scripting on high-CPU count VMs and loading the resulting output into BigQuery for analysis.</p>
+</li><li class="mop-wrapper"><p>Rapid prototyping of tools and technologies to test their fit against our needs. These included Apache Hive and Kubernetes for our Druid cluster.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Software Engineer, Vistaprint Data Warehouse</strong>,&nbsp;Vistaprint</p><p class="text-muted"><small><span class="space-right">Oct, 2017 - Mar, 2018</span><span><i class="icon-clock mr-5"></i>5 months</span></small></p><div class="mop-wrapper space-bottom"><p>As part of a two person team, I ETL'd Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution was co-creating and refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work was in Azure Data Warehouse. The data was used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.</p>
+</div><ul><li class="mop-wrapper"><p>Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).</p>
+</li><li class="mop-wrapper"><p>Using change-tracking-replication infrastructure to copy data over for processing.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Software Engineer, Local Listings product</strong>,&nbsp;Vistaprint</p><p class="text-muted"><small><span class="space-right">Apr, 2015 - Oct, 2017</span><span><i class="icon-clock mr-5"></i>2 years 6 months</span></small></p><div class="mop-wrapper space-bottom"><p>Local Listings is a tool for small businesses to disseminate their contact information to many directories so customers can find them. My technical contributions spanned the Postgres/Express/React/Node stack with a focus on the backend. I was also scrum master for my team and worked closely with the PO on product decisions. I remain on the on-call rotation for this product.</p>
+</div><ul><li class="mop-wrapper"><p>Principal contributor to app codebase.</p>
+</li><li class="mop-wrapper"><p>Led a team of 3 engineers and 2 QE in migrating to a new 3rd-party backend service provider. In numbers: 4 months of effort, ~100 Jira tickets covering the entire stack, ~40k existing users affected (in addition to all new signups).</p>
+</li><li class="mop-wrapper"><p>Refactored the database schema from update to event-driven.</p>
+</li><li class="mop-wrapper"><p>Introduced and implemented a means to measure customer impact: (1) call Google's Custom Search Engine API to search for users' identifying information and (2) process resulting JSON to fuzzy search for the user's presence in results. Track changes in search result appearances over time to determine whether Local Listings improves users' appearance in organic search results.</p>
+</li><li class="mop-wrapper"><p>A (small) open source contribution - Augmented an existing Node library's Levenshtein implementation to handle fuzzy searching (https://github.com/NaturalNode/natural/pull/360).</p>
+</li><li class="mop-wrapper"><p>Internationalization (using react-intl). Internationalized application frontend for future expansion to arbitrary locales.</p>
+</li><li class="mop-wrapper"><p>Expanded the application's unit test footprint ~5x.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Software Engineer, Pagemodo product</strong>,&nbsp;Vistaprint</p><p class="text-muted"><small><span class="space-right">Jun, 2014 - Apr, 2015</span><span><i class="icon-clock mr-5"></i>10 months</span></small></p><div class="mop-wrapper space-bottom"><p>Pagemodo is a one-stop-shop social media marketing tool targeted at small businesses. It is a Rails app with postgres db hosted on Heroku with a mix of Marionette/Backbone &amp; React on the frontend.</p>
+</div><ul><li class="mop-wrapper"><p>A Tweet-integrated Marionette Backbone SPA for Social Media Marketing World 2015 (https://www.pagemodo.com/smmw15). This was a thin vertical slice of work, adding tables/models, controller, views, and a Backbone app. Note that the 'post designer' to which I integrated the Twitter-posting experience already existed as a core feature of the Pagemodo product.</p>
+</li><li class="mop-wrapper"><p>A short stint working on our Apache SOLR integration to improve our content recommendation to users.</p>
+</li><li class="mop-wrapper"><p>Sundry bug fixes and small and medium feature tickets across the stack.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Rails developer - Max.gov</strong>,&nbsp;Dell @ Executive Office of the President</p><p class="text-muted"><small><span class="space-right">Apr, 2013 - Jun, 2014</span><span><i class="icon-clock mr-5"></i>1 year 2 months</span></small></p><div class="mop-wrapper space-bottom"><p>Max.gov is a tool to collect human-entered data across Federal agencies (e.g. to compile the federal budget). When I left, it had ~100k users. Brought on as an individual feature contributor, I eventually became the sole developer as a result of team restructuring. I interacted extensively directly with government clients to script ad-hoc data needs. My main contribution turned out to be, in effect, an ETL written in Rails. This script was needed to migrate individual tree-subsets of user data (order of magnitude, ~100k records) from a legacy database with Latin1 encoding a new database with UTF8 encoding. The following highlights are in reference to this script.</p>
+</div><ul><li class="mop-wrapper"><p>Outperformed pre-existing script in speed by up to two orders of magnitude (days to minutes).</p>
+</li><li class="mop-wrapper"><p>Outperformed pre-existing script in correctness - whereas the latter would perform inconsistently deep/shallow copies of data, thoughtful design and testing ensured that this script did not.</p>
+</li><li class="mop-wrapper"><p>Script was used to migrate mission-critical user data on a per-user basis to the new database.</p>
+</li><li class="mop-wrapper"><p>Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)</p>
+</li><li class="mop-wrapper"><p>Wrote logic in Ruby to: (1) traverse the application schema (~10 tables) from a given root record, (2) select the entire source tree of data into memory, (3) dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity, and (4) validate integrity of the copy.</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Systems Engineer Asc</strong>,&nbsp;Lockheed Martin</p><p class="text-muted"><small><span class="space-right">Apr, 2011 - Jun, 2014</span><span><i class="icon-clock mr-5"></i>3 years 2 months</span></small></p><div class="mop-wrapper space-bottom"><p>Sundry assignments, most relevantly (1) as a Rails dev for 6 months and then (2) writing JasperReports SQL queries for a different project.</p>
+</div><ul><li class="mop-wrapper"><p>Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. This was a Ruby on Rails app with MySQL database and vanilla Rails templates and jQuery on the frontend. Tools/tech involved: role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL</p>
+</li><li class="mop-wrapper"><p>Tested and corrected system-generated Jasper reports</p>
+</li><li class="mop-wrapper"><p>Scripted a domain-specific-language in Python to speed up generation of Jasper reports</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Intern</strong>,&nbsp;Booz Allen Hamilton</p><p class="text-muted"><small><span class="space-right">Jun, 2010 - Aug, 2010</span><span><i class="icon-clock mr-5"></i>2 months</span></small></p><div class="mop-wrapper space-bottom"><p>BAH's cybersecurity summer internship program</p>
+</div><ul><li class="mop-wrapper"><p>Developed software to gather open-source intelligence as part of a 3 person team</p>
+</li><li class="mop-wrapper"><p>Presented to fellow interns and employees on the project's outcome</p>
+</li><li class="mop-wrapper"><p>Skills: web scraping, web crawling, Python</p>
+</li></ul></div></li><li class="card card-nested clearfix"><div class="content"><p class="clear-margin relative"><strong>Undergraduate Researcher</strong>,&nbsp;Institute for Physical Sciences and Technology</p><p class="text-muted"><small><span class="space-right">Jun, 2006 - Oct, 2009</span><span><i class="icon-clock mr-5"></i>3 years 4 months</span></small></p><div class="mop-wrapper space-bottom"><p>Built a numerical model of a time-of-flight (ToF IMS) ion mass spectrometer. ToF IMS are used to measure solar wind composition. For an example diagram, see https://www2.mps.mpg.de/images/projekte/bepicolombo/mppe/mppe10.jpg. Input to the simulator was a specific solar wind composition. Output constituted histograms describing measurements from 3 instrument components. The simulation used lookup-tables of parameters describing these output histograms. These tables were populated using data collected from physics simulation software (SIMION and SRIM) and parametrized with scripts in Microsoft VBA.</p>
+</div><ul><li class="mop-wrapper"><p>Independently designed and implemented the simulation (in C) of an instrument measuring solar wind composition.</p>
+</li><li class="mop-wrapper"><p>Designed and prototyped a genetic algorithm in Java to infer solar wind composition from instrument output spectra.</p>
+</li><li class="mop-wrapper"><p>Authored 70 pages documenting design, development, and usage of the simulator.</p>
+</li></ul></div></li></ul></div></div><div class="detail" id="skills"><div class="icon"><i class="fs-lg icon-tools"></i><span class="mobile-title">Skills</span></div><div class="info"><h4 class="title text-uppercase">Skills</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested card-skills"><div class="skill-info"><strong>Data Pipeline</strong><div class="space-top labels"><span class="label label-keyword"><p>Dataflow (Apache Beam)</p>
+</span><span class="label label-keyword"><p>BigQuery</p>
+</span><span class="label label-keyword"><p>ETL/ELT</p>
+</span><span class="label label-keyword"><p>Redshift</p>
+</span><span class="label label-keyword"><p>Microsoft PDW</p>
+</span><span class="label label-keyword"><p>Columnar storage</p>
+</span><span class="label label-keyword"><p>Timeseries databases (Apache Druid)</p>
+</span><span class="label label-keyword"><p>Validation checks</p>
+</span><span class="label label-keyword"><p>Monitoring</p>
+</span><span class="label label-keyword"><p>Clickhouse</p>
+</span><span class="label label-keyword"><p>Snowflake</p>
+</span><span class="label label-keyword"><p>Fivetran</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Google Cloud</strong><div class="space-top labels"><span class="label label-keyword"><p>PubSub</p>
+</span><span class="label label-keyword"><p>CloudFunction</p>
+</span><span class="label label-keyword"><p>BigQuery</p>
+</span><span class="label label-keyword"><p>Compute (VM)</p>
+</span><span class="label label-keyword"><p>Cloud Scheduler</p>
+</span><span class="label label-keyword"><p>Dataflow (Apache Beam)</p>
+</span><span class="label label-keyword"><p>Load balancers</p>
+</span><span class="label label-keyword"><p>VPC</p>
+</span><span class="label label-keyword"><p>Storage</p>
+</span><span class="label label-keyword"><p>Stackdriver</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>AWS</strong><div class="space-top labels"><span class="label label-keyword"><p>EC2</p>
+</span><span class="label label-keyword"><p>Lambda</p>
+</span><span class="label label-keyword"><p>Redshift</p>
+</span><span class="label label-keyword"><p>Athena</p>
+</span><span class="label label-keyword"><p>RDS</p>
+</span><span class="label label-keyword"><p>IAM</p>
+</span><span class="label label-keyword"><p>VPA</p>
+</span><span class="label label-keyword"><p>S3</p>
+</span><span class="label label-keyword"><p>SNS</p>
+</span><span class="label label-keyword"><p>SQS</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Infrastructure as Code</strong><div class="space-top labels"><span class="label label-keyword"><p>Terraform</p>
+</span><span class="label label-keyword"><p>Terraform Cloud</p>
+</span><span class="label label-keyword"><p>Packer</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Ops/Cloud</strong><div class="space-top labels"><span class="label label-keyword"><p>Heroku</p>
+</span><span class="label label-keyword"><p>Logentries</p>
+</span><span class="label label-keyword"><p>NewRelic</p>
+</span><span class="label label-keyword"><p>Stackdriver</p>
+</span><span class="label label-keyword"><p>Pagerduty</p>
+</span><span class="label label-keyword"><p>Packer</p>
+</span><span class="label label-keyword"><p>DigitalOcean</p>
+</span><span class="label label-keyword"><p>AWS</p>
+</span><span class="label label-keyword"><p>Datadog</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>CDN configuration</strong><div class="space-top labels"><span class="label label-keyword"><p>Origin shielding</p>
+</span><span class="label label-keyword"><p>Primary/backup</p>
+</span><span class="label label-keyword"><p>Highwinds/Stackpath (vendor)</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Druid Cluster Administration</strong><div class="space-top labels"><span class="label label-keyword"><p>Scaling</p>
+</span><span class="label label-keyword"><p>Configuring</p>
+</span><span class="label label-keyword"><p>Monitoring</p>
+</span><span class="label label-keyword"><p>Debugging &amp; Troubleshooting</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Web Development</strong><div class="space-top labels"><span class="label label-keyword"><p>Express</p>
+</span><span class="label label-keyword"><p>Node</p>
+</span><span class="label label-keyword"><p>React</p>
+</span><span class="label label-keyword"><p>Rails</p>
+</span><span class="label label-keyword"><p>Templating</p>
+</span><span class="label label-keyword"><p>Creating and consuming web APIs</p>
+</span><span class="label label-keyword"><p>il8n</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Relational databases</strong><div class="space-top labels"><span class="label label-keyword"><p>Postgres</p>
+</span><span class="label label-keyword"><p>DB2</p>
+</span><span class="label label-keyword"><p>Sql server</p>
+</span><span class="label label-keyword"><p>Common table expressions</p>
+</span><span class="label label-keyword"><p>Stored procedures</p>
+</span><span class="label label-keyword"><p>Views</p>
+</span><span class="label label-keyword"><p>Indexes</p>
+</span><span class="label label-keyword"><p>Query inspection/design/optimization</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Software Development Lifecycle</strong><div class="space-top labels"><span class="label label-keyword"><p>On-call rotation</p>
+</span><span class="label label-keyword"><p>Scrum</p>
+</span><span class="label label-keyword"><p>JIRA</p>
+</span><span class="label label-keyword"><p>git</p>
+</span><span class="label label-keyword"><p>scrum master</p>
+</span><span class="label label-keyword"><p>distributed teams</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Application Testing</strong><div class="space-top labels"><span class="label label-keyword"><p>Stubs</p>
+</span><span class="label label-keyword"><p>Spies</p>
+</span><span class="label label-keyword"><p>Mocks</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Functional Languages</strong><div class="space-top labels"><span class="label label-keyword"><p>Haskell</p>
+</span><span class="label label-keyword"><p>Coq</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Other Ops/Infrastructure</strong><div class="space-top labels"><span class="label label-keyword"><p>Docker</p>
+</span><span class="label label-keyword"><p>Bamboo</p>
+</span><span class="label label-keyword"><p>Kubernetes</p>
+</span><span class="label label-keyword"><p>Jenkins</p>
+</span></div></div></li><li class="card card-nested card-skills"><div class="skill-info"><strong>Data science / Numerical Simulations</strong><div class="space-top labels"><span class="label label-keyword"><p>Monte Carlo simulation</p>
+</span><span class="label label-keyword"><p>Genetic algorithms</p>
+</span><span class="label label-keyword"><p>Parametrizing data sets</p>
+</span></div></div></li></ul></div></div></div><div class="detail" id="education"><div class="icon"><i class="fs-lg icon-graduation-cap"></i><span class="mobile-title">Education</span></div><div class="info"><h4 class="title text-uppercase">Education</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Mathematics, Bachelor of Science,&nbsp;</strong>University of Maryland, College Park</p><p class="text-muted"><small>Sep, 2006 - May, 2011</small></p><i>3.6</i><div class="space-top labels"><span class="label label-keyword"><p>Real analysis</p>
+</span><span class="label label-keyword"><p>Quantum physics</p>
+</span><span class="label label-keyword"><p>Linear algebra</p>
+</span><span class="label label-keyword"><p>Combinatorics</p>
+</span><span class="label label-keyword"><p>Cryptology</p>
+</span><span class="label label-keyword"><p>Computational methods</p>
+</span></div></div></li><li class="card card-nested"><div class="content"><p class="clear-margin relative"><strong>Computer Science, Bachelor of Science,&nbsp;</strong>University of Maryland, College Park</p><p class="text-muted"><small>Sep, 2006 - May, 2011</small></p><i>3.6</i><div class="space-top labels"><span class="label label-keyword"><p>Machine Learning</p>
+</span><span class="label label-keyword"><p>Algorithms</p>
+</span><span class="label label-keyword"><p>Systems Architecture</p>
+</span></div></div></li><li class="card card-nested"><div class="content"><p class="clear-margin relative"><i class="icon-circle current-event" rel="tooltip" title="Currently Pursuing" data-placement="left"></i><strong>Graduate School, Non-degree-seeking,&nbsp;</strong>University of Maryland, College Park</p><p class="text-muted"><small>Aug, 2022 - Present</small></p><i>4.0</i><div class="space-top labels"><span class="label label-keyword"><p>Abstract Algebra I &amp; II</p>
+</span></div></div></li></ul></div></div></div><div class="detail" id="interests"><div class="icon"><i class="fs-lg icon-heart"></i><span class="mobile-title">Interests</span></div><div class="info"><h4 class="title text-uppercase">Interests</h4><div class="content"><ul class="list-unstyled clear-margin"><li class="card card-nested"><p><strong>Cycling</strong></p><div class="space-top labels"><span class="label label-keyword">Crits</span><span class="label label-keyword">Cyclocross</span></div></li><li class="card card-nested"><p><strong>Art</strong></p><div class="space-top labels"><span class="label label-keyword">Theatre</span><span class="label label-keyword">20th century literature</span><span class="label label-keyword">Magritte</span></div></li><li class="card card-nested"><p><strong>Recreational Math</strong></p><div class="space-top labels"><span class="label label-keyword">ProjectEuler (solved 72 problems using Haskell)</span></div></li><li class="card card-nested"><p><strong>Volunteering</strong></p><div class="space-top labels"><span class="label label-keyword">Read-alouds</span><span class="label label-keyword">Tutoring</span></div></li></ul></div></div></div></div></div></section></div></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script><script>$(function () {
+  var toggleFloatingMenu = function() {
+    $( '.js-floating-nav' ).toggleClass( 'is-visible' );
+    $( '.js-floating-nav-trigger' ).toggleClass( 'is-open' );
+  };
 
-  </style>
-  
-  </head>
-  <body>
-  
-  <div id="resume">
-    	<header id="header" class="clear">
-    		<div>
-    			<h1 class="name">Matthew Dantas-McCutcheon</h1>
-    			<h2 class="label">Software Engineer</h2>
-    		</div>
-    		
-    		
-    
-    		<div id="contact">
-    			<div class="email">
-    				<span class="fa fa-envelope-o"></span>
-    				<a href="mailto:mateusdm88@gmail.com">mateusdm88@gmail.com</a>
-    			</div>
-    		</div>
-    
-    		<div id="profiles">
-    			<div class="item">
-    				<div class="username">
-    					<span class="fa fa-github github social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://github.com/mDantas">mDantas</a>
-    					</span> 
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-    
-    	<section class="section main-summary">
-    		<section>
-    			<div><p>Software engineer, problem-solver, rapid learner, leader and individual contributor. I am interested in expanding on my experience handling and processing internet-scale traffic.</p></div>
-    		</section>
-    	</section>
-    
-    <section class="section margin1">
-    	<header>
-    		<h2 class='section-title'>Skills</h2>
-    	</header>
-    	<section id="skills">
-    		<div class="item">
-    			<h3 class="name">
-    				Data Pipeline
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Dataflow (Apache Beam)</li>
-    				<li>BigQuery</li>
-    				<li>ETL/ELT</li>
-    				<li>Redshift</li>
-    				<li>Microsoft PDW</li>
-    				<li>Columnar storage</li>
-    				<li>Timeseries databases (Apache Druid)</li>
-    				<li>Validation checks</li>
-    				<li>Monitoring</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Google Cloud
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>PubSub</li>
-    				<li>CloudFunction</li>
-    				<li>BigQuery</li>
-    				<li>Compute (VM)</li>
-    				<li>Cloud Scheduler</li>
-    				<li>Dataflow (Apache Beam)</li>
-    				<li>Load balancers</li>
-    				<li>VPC</li>
-    				<li>Storage</li>
-    				<li>Stackdriver</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Infrastructure as Code
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Terraform</li>
-    				<li>Packer</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Ops/Cloud
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Heroku</li>
-    				<li>Logentries</li>
-    				<li>NewRelic</li>
-    				<li>Stackdriver</li>
-    				<li>Pagerduty</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				CDN configuration
-    			</h3>
-    			 
-    			<div class="level some experience">
-    				<em>Some Experience</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Origin shielding</li>
-    				<li>Primary/backup</li>
-    				<li>Highwinds/Stackpath (vendor)</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Druid Cluster Administration
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Scaling</li>
-    				<li>Configuring</li>
-    				<li>Monitoring</li>
-    				<li>Debugging &amp; Troubleshooting</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Web Development
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Express</li>
-    				<li>Node</li>
-    				<li>React</li>
-    				<li>Rails</li>
-    				<li>Templating</li>
-    				<li>Creating and consuming web APIs</li>
-    				<li>il8n</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Relational databases
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Postgres</li>
-    				<li>DB2</li>
-    				<li>Sql server</li>
-    				<li>Common table expressions</li>
-    				<li>Stored procedures</li>
-    				<li>Views</li>
-    				<li>Indexes</li>
-    				<li>Query inspection/design/optimization</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Software Development Lifecycle
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>On-call rotation</li>
-    				<li>Scrum</li>
-    				<li>JIRA</li>
-    				<li>git</li>
-    				<li>scrum master</li>
-    				<li>distributed teams</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Application Testing
-    			</h3>
-    			 
-    			<div class="level experienced">
-    				<em>Experienced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Stubs</li>
-    				<li>Spies</li>
-    				<li>Mocks</li>
-    				<li>Mocha</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Functional Languages
-    			</h3>
-    			 
-    			<div class="level some experience">
-    				<em>Some experience</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Haskell</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Other Ops/Infrastructure
-    			</h3>
-    			 
-    			<div class="level some experience">
-    				<em>Some experience</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Docker</li>
-    				<li>Bamboo</li>
-    				<li>Kubernetes</li>
-    				<li>Jenkins</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Data science / Numerical Simulations
-    			</h3>
-    			 
-    			<div class="level some experience">
-    				<em>Some experience</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Monte Carlo simulation</li>
-    				<li>Genetic algorithms</li>
-    				<li>Parametrizing data sets</li>
-    			</ul>
-    		</div>
-    	</section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(8)</span></h2>
-      </header>
-    
-      <section id="work">
-        <section class="work-item">
-    
-            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
-            <label for="work-item-0"></label>
-    
-    			<header>
-    				<div class="position">Infrastructure Team Lead</div>
-    				<div class="company">Megaphone (formerly Panoply Media)</div>
-    				<div class="date">
-    				  <span class="startDate">March 2018</span> 
-    					<span class="endDate">- May 2019</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>I productionalized the company's data platform and became the data pipeline owner. I implemented push-button deployment of the entire data pipeline while increasing overall availability, monitoring, and correctness. As for scale, when I left, Megaphone was serving ~350MM downloads per month accounting for over half of all global podcast downloads. This corresponded to ~50 petabytes (mostly CDN-fronted) of downloads per month, and the data pipeline processing approximately 120MM events (podcast client requests) per day. I also led the team (2-4 direct reports) responsible for adserving, content stitching, and ad inventory forecasting.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Established the company's Infrastructure-as-Code standard. After a process of prototyping other Infrastructure-as-Code solutions (e.g. Kubernetes), I discovered Terraform and Packer and proceeded to capture our Druid cluster there. This meant that for the first time we could incrementally develop, test, and version the company's analytics backbone. I also introduced Stackdriver monitoring so that we had pipeline health metrics tied to Pagerduty. This spanned my first few months at Megaphone.</p></li>
-                <li><p>Architected the expansion of the data platform to support 3 (up from 1) different download-counting methodologies. This work spanned ~1.5 months and was implemented by myself and another engineer. In this effort, I learned the Apache Dataflow Java SDK sufficiently to make significant updates to the existing Dataflow pipeline. The verification process involved loading the new pipeline's output into BigQuery to make extensive quality checks. The effort landed successfully in production early on 12/15/19, two weeks before the Jan 1 deadline.</p></li>
-                <li><p>Architected the migration of the pipeline's source-data-archiving responsibility from a cron-triggered Ruby script whose output was manually verified in email form by our SRE to a Stackdriver-monitored service consisting of serverless functions, queues, and cloud storage.</p></li>
-                <li><p>Architected and implemented the migration of a brittle Kubernetes-hosted Go service that enhanced incoming log data to Dataflow. The Go service had become brittle under increased load and had begun to crash resulting in daily data losses of 10% on average. The migration to Dataflow jobs orchestrated by message queues and cloud-functions ended this pattern of data loss.</p></li>
-                <li><p>Built the BI data pipeline: wrote a ~300 LOC bash script that replicated data from our application database (Postgres) and our timeseries downloads database (Druid) to BigQuery and then checked correctness (checking just counts between Druid and BigQuery but column-MD5 checks for postgres data). I also prototyped moving this to Apache Airflow but the script worked too well to justify the move. This powered all of BI reporting.</p></li>
-                <li><p>Built one half of the ad-inventory forecasting platform. I initially prototyped in Go but then moved to Haskell as a much more natural language for solving this combinatorically-focused problem. Our forecasting platform achieved 'first-light' but I don't know whether it went further after my departure.</p></li>
-                <li><p>Frequent one-off efforts to support BI in the form of data-product generation, spelunking into platform anomalies, requests from finance, etc. This mostly took the form of shell scripting on high-CPU count VMs and loading the resulting output into BigQuery for analysis.</p></li>
-                <li><p>Rapid prototyping of tools and technologies to test their fit against our needs. These included Apache Hive and Kubernetes for our Druid cluster.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-1" type="checkbox" class="toggle-item" />
-            <label for="work-item-1"></label>
-    
-    			<header>
-    				<div class="position">Software Engineer, Vistaprint Data Warehouse</div>
-    				<div class="company">Vistaprint</div>
-    				<div class="date">
-    				  <span class="startDate">October 2017</span> 
-    					<span class="endDate">- March 2018</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>As part of a two person team, I ETL'd Vistaprint Digital's subscription data from disparate relational sources (~12 products across two billing platforms) into a central data warehouse. My contribution was co-creating and refining the target fact and dimension tables as well as the sprocs that populate them. Most of the work was in Azure Data Warehouse. The data was used to forecast, per-product, KPIs like signups, bookings, cancellations, etc.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Normalizing data from relational format to columnar-stored fact/dimension tables (star schema).</p></li>
-                <li><p>Using change-tracking-replication infrastructure to copy data over for processing.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-2" type="checkbox" class="toggle-item" />
-            <label for="work-item-2"></label>
-    
-    			<header>
-    				<div class="position">Software Engineer, Local Listings product</div>
-    				<div class="company">Vistaprint</div>
-    				<div class="date">
-    				  <span class="startDate">April 2015</span> 
-    					<span class="endDate">- October 2017</span> 
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="www.vistaprint.com/local-listings.aspx">www.vistaprint.com/local-listings.aspx</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Local Listings is a tool for small businesses to disseminate their contact information to many directories so customers can find them. My technical contributions spanned the Postgres/Express/React/Node stack with a focus on the backend. I was also scrum master for my team and worked closely with the PO on product decisions. I remain on the on-call rotation for this product.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Principal contributor to app codebase.</p></li>
-                <li><p>Led a team of 3 engineers and 2 QE in migrating to a new 3rd-party backend service provider. In numbers: 4 months of effort, ~100 Jira tickets covering the entire stack, ~40k existing users affected (in addition to all new signups).</p></li>
-                <li><p>Refactored the database schema from update to event-driven.</p></li>
-                <li><p>Introduced and implemented a means to measure customer impact: (1) call Google's Custom Search Engine API to search for users' identifying information and (2) process resulting JSON to fuzzy search for the user's presence in results. Track changes in search result appearances over time to determine whether Local Listings improves users' appearance in organic search results.</p></li>
-                <li><p>A (small) open source contribution - Augmented an existing Node library's Levenshtein implementation to handle fuzzy searching (https://github.com/NaturalNode/natural/pull/360).</p></li>
-                <li><p>Internationalization (using react-intl). Internationalized application frontend for future expansion to arbitrary locales.</p></li>
-                <li><p>Expanded the application's unit test footprint ~5x.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-3" type="checkbox" class="toggle-item" />
-            <label for="work-item-3"></label>
-    
-    			<header>
-    				<div class="position">Software Engineer, Pagemodo product</div>
-    				<div class="company">Vistaprint</div>
-    				<div class="date">
-    				  <span class="startDate">June 2014</span> 
-    					<span class="endDate">- April 2015</span> 
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="http://www.pagemodo.com">http://www.pagemodo.com</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Pagemodo is a one-stop-shop social media marketing tool targeted at small businesses. It is a Rails app with postgres db hosted on Heroku with a mix of Marionette/Backbone & React on the frontend.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>A Tweet-integrated Marionette Backbone SPA for Social Media Marketing World 2015 (https://www.pagemodo.com/smmw15). This was a thin vertical slice of work, adding tables/models, controller, views, and a Backbone app. Note that the 'post designer' to which I integrated the Twitter-posting experience already existed as a core feature of the Pagemodo product.</p></li>
-                <li><p>A short stint working on our Apache SOLR integration to improve our content recommendation to users.</p></li>
-                <li><p>Sundry bug fixes and small and medium feature tickets across the stack.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-4" type="checkbox" class="toggle-item" />
-            <label for="work-item-4"></label>
-    
-    			<header>
-    				<div class="position">Rails developer - Max.gov</div>
-    				<div class="company">Dell @ Executive Office of the President</div>
-    				<div class="date">
-    				  <span class="startDate">April 2013</span> 
-    					<span class="endDate">- June 2014</span> 
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="https://max.gov">https://max.gov</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Max.gov is a tool to collect human-entered data across Federal agencies (e.g. to compile the federal budget). When I left, it had ~100k users. Brought on as an individual feature contributor, I eventually became the sole developer as a result of team restructuring. I interacted extensively directly with government clients to script ad-hoc data needs. My main contribution turned out to be, in effect, an ETL written in Rails. This script was needed to migrate individual tree-subsets of user data (order of magnitude, ~100k records) from a legacy database with Latin1 encoding a new database with UTF8 encoding. The following highlights are in reference to this script.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Outperformed pre-existing script in speed by up to two orders of magnitude (days to minutes).</p></li>
-                <li><p>Outperformed pre-existing script in correctness - whereas the latter would perform inconsistently deep/shallow copies of data, thoughtful design and testing ensured that this script did not.</p></li>
-                <li><p>Script was used to migrate mission-critical user data on a per-user basis to the new database.</p></li>
-                <li><p>Used binary search to robustly insert a 'haystack' of good data while collecting the 'needles' of bad data (usually records whose Latin1 to UTF8 translation overflowed the column size)</p></li>
-                <li><p>Wrote logic in Ruby to: (1) traverse the application schema (~10 tables) from a given root record, (2) select the entire source tree of data into memory, (3) dynamically create the bulk insertion statements to insert the data into the target database in-order so as to respect relational integrity, and (4) validate integrity of the copy.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-5" type="checkbox" class="toggle-item" />
-            <label for="work-item-5"></label>
-    
-    			<header>
-    				<div class="position">Systems Engineer Asc</div>
-    				<div class="company">Lockheed Martin</div>
-    				<div class="date">
-    				  <span class="startDate">April 2011</span> 
-    					<span class="endDate">- June 2014</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Sundry assignments, most relevantly (1) as a Rails dev for 6 months and then (2) writing JasperReports SQL queries for a different project.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Developed (as sole and full-stack developer learning on the fly) a web application for placing and reviewing procurement orders following a role-based approval workflow. This was a Ruby on Rails app with MySQL database and vanilla Rails templates and jQuery on the frontend. Tools/tech involved: role-based authorization, authentication, LDAP, cron jobs, SMTP mailer, deterministic finite automata (to implement the state machine for order workflow), CSS3, MySQL</p></li>
-                <li><p>Tested and corrected system-generated Jasper reports</p></li>
-                <li><p>Scripted a domain-specific-language in Python to speed up generation of Jasper reports</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-6" type="checkbox" class="toggle-item" />
-            <label for="work-item-6"></label>
-    
-    			<header>
-    				<div class="position">Intern</div>
-    				<div class="company">Booz Allen Hamilton</div>
-    				<div class="date">
-    				  <span class="startDate">June 2010</span> 
-    					<span class="endDate">- August 2010</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>BAH's cybersecurity summer internship program</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Developed software to gather open-source intelligence as part of a 3 person team</p></li>
-                <li><p>Presented to fellow interns and employees on the project's outcome</p></li>
-                <li><p>Skills: web scraping, web crawling, Python</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-7" type="checkbox" class="toggle-item" />
-            <label for="work-item-7"></label>
-    
-    			<header>
-    				<div class="position">Undergraduate Researcher</div>
-    				<div class="company">Institute for Physical Sciences and Technology</div>
-    				<div class="date">
-    				  <span class="startDate">June 2006</span> 
-    					<span class="endDate">- October 2009</span> 
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="http://www.ipst.umd.edu/undergraduate/">http://www.ipst.umd.edu/undergraduate/</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Built a numerical model of a time-of-flight (ToF IMS) ion mass spectrometer. ToF IMS are used to measure solar wind composition. For an example diagram, see https://www2.mps.mpg.de/images/projekte/bepicolombo/mppe/mppe10.jpg. Input to the simulator was a specific solar wind composition. Output constituted histograms describing measurements from 3 instrument components. The simulation used lookup-tables of parameters describing these output histograms. These tables were populated using data collected from physics simulation software (SIMION and SRIM) and parametrized with scripts in Microsoft VBA.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Independently designed and implemented the simulation (in C) of an instrument measuring solar wind composition.</p></li>
-                <li><p>Designed and prototyped a genetic algorithm in Java to infer solar wind composition from instrument output spectra.</p></li>
-                <li><p>Authored 70 pages documenting design, development, and usage of the simulator.</p></li>
-            </ul>
-        	</div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Education <span class="item-count">(2)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header>
-            <div class="header-left">
-              <div class="studyType">
-                Bachelor of Science
-              </div>
-              <div class="area">
-                Mathematics
-              </div>
-              <div class="institution">
-                University of Maryland, College Park
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2006
-              </span>
-              <span class="endDate">
-              - 2011
-              </span>
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>Real analysis</li>
-            <li>Quantum physics</li>
-            <li>Linear algebra</li>
-            <li>Combinatorics</li>
-            <li>Cryptology</li>
-            <li>Computational methods</li>
-          </ul>
-    
-          <div class="item">
-            <div class='gpa'>
-              <strong> Grade:</strong> <span>3.6</span>
-            </div>
-          </div>
-        </section>
-        <section class="education-item">
-          <header>
-            <div class="header-left">
-              <div class="studyType">
-                Bachelor of Science
-              </div>
-              <div class="area">
-                Computer Science
-              </div>
-              <div class="institution">
-                University of Maryland, College Park
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2006
-              </span>
-              <span class="endDate">
-              - 2011
-              </span>
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>Machine Learning</li>
-            <li>Algorithms</li>
-            <li>Systems Architecture</li>
-          </ul>
-    
-          <div class="item">
-            <div class='gpa'>
-              <strong> Grade:</strong> <span>3.6</span>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section margin1">
-      <header>
-        <h2 class='section-title'>Languages</h2>
-      </header>
-      <section id="languages">
-        <div class="display">
-          <h3 class="language">
-            Portuguese
-          </h3>
-          <div class="item">
-            <div class="level fluency native fluency">
-              <em>Native fluency</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-        <div class="display">
-          <h3 class="language">
-            French
-          </h3>
-          <div class="item">
-            <div class="level fluency professional proficiency">
-              <em>Professional proficiency</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-    <section class="section margin1">
-      <header>
-        <h2 class='section-title' class='section-title'>Interests</h2>
-      </header>
-      <section id="interests">
-        <div class="item">
-          <h3 class="name">
-            Cycling
-          </h3>
-          <ul class="keywords">
-            <li>Crits</li>
-            <li>Cyclocross</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3 class="name">
-            Art
-          </h3>
-          <ul class="keywords">
-            <li>Theatre</li>
-            <li>20th century literature</li>
-            <li>Magritte</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3 class="name">
-            Recreational Math
-          </h3>
-          <ul class="keywords">
-            <li>ProjectEuler</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3 class="name">
-            Volunteering
-          </h3>
-          <ul class="keywords">
-            <li>Reading to preschoolers</li>
-          </ul>
-        </div>
-      </section>
-    </section>
+  $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+  $( "[data-toggle=tooltip]" ).tooltip();
+  $( '.js-floating-nav-trigger' ).on( 'click', function(e) {
+    e.preventDefault();
+    toggleFloatingMenu();
+  });
+  $( '.js-floating-nav a' ).on( 'click', toggleFloatingMenu );
 
-  </body>
-</html>
+  $("#remaining-profiles").on('show.bs.collapse', function() {
+    $( '.js-profiles-collapse > i' )
+      .removeClass( 'icon-chevron-down' )
+      .addClass( 'icon-chevron-up' );
+  });
+
+  $("#remaining-profiles").on('hidden.bs.collapse', function() {
+    $( '.js-profiles-collapse > i' )
+      .removeClass( 'icon-chevron-up' )
+      .addClass( 'icon-chevron-down' );
+  });
+});
+</script><script>WebFontConfig = {
+  google: { families: [ 'Lato:300,400,700:latin' ] }
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();</script></body></html>
