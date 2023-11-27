@@ -262,7 +262,7 @@
         "Athena",
         "RDS",
         "IAM",
-        "VPA",
+        "VPC",
         "S3",
         "SNS",
         "SQS"
